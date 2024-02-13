@@ -101,15 +101,23 @@ $textBlack: #080808;
   font-weight: 400;
   line-height: 20px;
   @include adaptiv-font(20, 18);
+
+  span { 
+    display: block;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+  }
 }
 
 %whiteBtn {
   border: 1px solid #000;
   color: #080808;
-  background: #fff;
+  background-color: #fff;
 
-  span::before {
-    content: url("../images/dotBlack.svg");
+  span {
+    background-color: #000;
+
   }
 
   &:hover {
@@ -118,8 +126,8 @@ $textBlack: #080808;
     border: none;
     transition: 0.3s;
 
-    span::before {
-      content: url("../images/dot.svg");
+    span {
+      background-color: #fff;
     }
   }
 }
@@ -128,8 +136,8 @@ $textBlack: #080808;
   background: #394acb;
   color: #fff;
 
-  span::before {
-    content: url("../images/dot.svg");
+  span {
+    background-color: #fff;
   }
 
   &:hover {
@@ -144,8 +152,8 @@ $textBlack: #080808;
   border: 1px solid #fff;
   color: #fff;
 
-  span::before {
-    content: url("../images/dot.svg");
+  span {
+    background-color: #fff;
   }
 
   &:hover {
@@ -182,6 +190,7 @@ $textBlack: #080808;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 }
+
 .slick-prev {
   background-image: url("../images/arrow-left.svg");
 }
@@ -229,8 +238,8 @@ $textBlack: #080808;
     // MOBILE MENU
 
     .header__burgerIcon {
-      width: 40px;
-      height: 40px;
+      width: 20px;
+      height: 20px;
       position: relative;
       z-index: 12;
       overflow: hidden;
@@ -357,13 +366,10 @@ $textBlack: #080808;
         margin-bottom: 50px;
 
         .primary__btn1 {
-
-
           @extend %blueBtn;
         }
 
         .primary__btn2 {
-
           @extend %nonColorBtn;
         }
       }
@@ -1076,7 +1082,6 @@ $textBlack: #080808;
   .footer__container {
     .footer__inner {
       border-radius: 20px 20px 0px 0px;
-      background: #080808;
 
       gap: 15px;
       display: grid;
@@ -1449,13 +1454,6 @@ $textBlack: #080808;
       }
 
 
-      .header__burgerIcon {
-        position: absolute;
-        transform: translate(-50%, 50%);
-        right: 5px;
-        top: 0;
-        z-index: 13;
-      }
 
       .header__mobileNav {
         position: fixed;
@@ -1748,7 +1746,8 @@ $textBlack: #080808;
   }
 
   .footer {
-    padding: 80px 0 60px;
+    padding: 60px 0;
+
     .footer__container {
       .footer__inner {
         position: relative;

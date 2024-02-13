@@ -165,8 +165,6 @@ let menuBtn = document.querySelector('.header__burgerIcon');
 let menu = document.querySelector('.header__mobileNav');
 let menuLinks = document.querySelectorAll('.menu-item')
 
-
-
 menuBtn.addEventListener('click', function (event) {
     event.preventDefault();
     toggleMenu();
@@ -182,6 +180,28 @@ function toggleMenu() {
     menuBtn.classList.toggle('active');
     menu.classList.toggle('active');
     document.body.classList.toggle('lock');
+}
+
+
+
+// faq section
+let accItem = document.getElementsByClassName("faq__item");
+let accHD = document.getElementsByClassName("faq__head");
+console.log(accItem);
+console.log(accHD);
+
+for (i = 0; i < accHD.length; i++) {
+  accHD[i].addEventListener("click", toggleItem, false);
+}
+
+function toggleItem() {
+  let itemClass = this.parentNode.className;
+  for (i = 0; i < accItem.length; i++) {
+    accItem[i].className = "faq__item close";
+  }
+  if (itemClass == "faq__item close") {
+    this.parentNode.className = "faq__item open";
+  }
 }
 
 
