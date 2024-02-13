@@ -519,10 +519,10 @@ p {
 }
 /* Landscape phones and portrait tablets */
 @media (max-width: 768px) {
+  
   @function reWidth($number) {
     $maket: 360;
     $relative: 100;
-
     @return $number / $maket * $relative * 1vw;
   }
 
