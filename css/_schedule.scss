@@ -21,7 +21,7 @@ h6 {
   font-family: "Mars Type";
 }
 p {
-  font-family: "Mars Type";
+  font-family: "Arimo";
 }
 
 .wrapper {
@@ -47,6 +47,8 @@ p {
   display: flex;
   gap: 10px;
   margin-bottom: reWidth(30);
+  position: relative;
+  z-index: 4;
 
   li {
     position: relative;
@@ -150,7 +152,6 @@ p {
     min-height: 100%;
     min-height: 100%;
     z-index: -2;
-    border-radius: 20px;
     overflow: hidden;
   }
   .promo__text {
@@ -180,19 +181,18 @@ p {
   margin-top: -52px;
   position: relative;
   z-index: 2;
-
   background-image: url(../images/courses-back.png);
-  background-position: top;
+  background-position: 0 15px;
   background-repeat: no-repeat;
   background-size: contain;
 
+
   .courses__inner {
     border-radius: 20px;
-
     background: linear-gradient(180deg, #070707 0%, #1a1a1a 100%);
-
     padding: reWidth(100) reWidth(50) reWidth(60);
     color: #fff;
+
   }
 
   .courses__title {
@@ -322,10 +322,160 @@ p {
   }
 }
 
+/* feedback section */
+
+.feedback {
+  padding-top: 120px;
+
+  .feedback__container {
+  }
+  .feedback__title {
+    margin-bottom: 30px;
+    color: #fff;
+  }
+  .title {
+  }
+  .feedback__slider {
+    width: calc(100% + 100px);
+
+    .slick-list {
+      overflow: hidden;
+    }
+    .slick-track {
+      gap: 20px;
+    }
+
+    .slick-active {
+      opacity: 1;
+    }
+
+    .slick-cloned {
+    }
+
+    .slick-arrow {
+      right: 100px;
+      top: -80px;
+    }
+
+    .slick-prev {
+      right: 155px;
+    }
+  }
+  .feedback__item {
+    padding: 20px 30px 20px 20px;
+    background-color: #fff;
+    color: #080808;
+    width: calc(50% - 10px);
+    max-width: 610px;
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 0.5;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 15px 10px;
+  }
+
+  .feedback__user {
+    display: flex;
+    gap: 15px;
+    height: fit-content;
+  }
+  .user {
+  }
+  .user__photo {
+    height: 71px;
+    width: 71px;
+    max-width: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .user__name {
+    max-width: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h4 {
+      font-size: 20px;
+      line-height: 20px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 16px;
+      opacity: 0.5;
+    }
+  }
+
+  blockquote {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    span {
+      font-family: "Mars Type";
+      font-size: clamp(30px, 3.48vw, 50px);
+      line-height: 1;
+    }
+    p {
+      font-family: "Mars Type";
+      font-size: clamp(22px, 2.08vw, 30px);
+      line-height: 1;
+    }
+  }
+  .feedback__text {
+    opacity: 0.5;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .feedback__video {
+    height: 230px;
+    max-width: 409px;
+    width: 100%;
+    border-radius: 15px;
+    border: #ffffff solid 1px;
+    overflow: hidden;
+
+    grid-column: 1/3;
+
+    video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
 /* faq section */
 .faq {
   color: #fff;
   padding: 120px 0;
+  position: relative;
+
+  &::before { 
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: reWidth(701);
+    max-width: 701px;
+    height: reWidth(1830);
+    max-height: 1830px;
+    background: url(../images/faq-decor.svg) top left no-repeat;
+    background-size: cover;
+    bottom: -218px;
+    z-index: -1;
+  }
 
   .faq__container {
     position: relative;
@@ -334,13 +484,15 @@ p {
     margin-bottom: 30px;
   }
   .faq__inner {
-    max-width: reWidth(610);
+    width: reWidth(610);
+
   }
 
   .faq__item {
     color: #fff;
     padding: 40px 0;
     border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+    max-width: 610px;
 
     &:first-child {
       padding-top: 0;
@@ -477,7 +629,7 @@ p {
   }
 }
 
-/* footer for other pages */ 
+/* footer for other pages */
 
 .footer {
   &.grey {
@@ -519,7 +671,6 @@ p {
 }
 /* Landscape phones and portrait tablets */
 @media (max-width: 768px) {
-  
   @function reWidth($number) {
     $maket: 360;
     $relative: 100;
@@ -621,7 +772,7 @@ p {
         border-radius: 10px;
         width: 100%;
         height: reWidth(216);
-
+        min-width: 0;
         max-width: 370px;
         max-height: 319px;
       }
@@ -676,11 +827,16 @@ p {
   .faq {
     padding: 100px 0 120px;
 
+
+  &::before { 
+    display: none;
+  }
     .faq__title {
       margin-bottom: 20px;
     }
     .faq__inner {
       max-width: none;
+      width: 100%;
     }
 
     .faq__item {
@@ -739,17 +895,87 @@ p {
     }
   }
 
-/* footer for other pages */ 
+  /* footer for other pages */
 
   .footer {
     &.grey {
       background: #1d1d1d !important;
-  
+
       .footer__info,
       .footer__address,
       .footer__followUs {
         background: #080808 !important;
       }
+    }
+  }
+
+  /* feedback section */
+
+  .feedback {
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    .feedback__slider {
+      width: calc(100% + 35px);
+
+      .slick-track {
+        gap: 10px;
+      }
+
+      .slick-arrow {
+        right: 35px;
+        top: inherit;
+        bottom: -50px;
+      }
+
+      .slick-prev {
+        right: 85px;
+      }
+    }
+    .feedback__item {
+      padding: 30px 20px 30px 20px;
+      width: calc(50% - 10px);
+      border-radius: 10px;
+
+      gap: 20px;
+    }
+
+    .feedback__user {
+      gap: 10px;
+    }
+
+    .user__photo {
+      height: 50px;
+      width: 50px;
+      min-width: 50px;
+    }
+    .user__name {
+      h4 {
+        font-size: 14px;
+        line-height: 18px;
+      }
+      p {
+        font-size: 10px;
+        line-height: 14px;
+      }
+    }
+
+    blockquote {
+      max-width: 90%;
+      span {
+        margin-bottom: -10px;
+      }
+    }
+    .feedback__text {
+      font-size: 16px;
+      line-height: 20px;
+      max-width: 90%;
+    }
+    .feedback__video {
+      height: reWidth(163);
+      max-height: 230px;
+      width: 100%;
+      border-radius: 10px;
     }
   }
 }
@@ -776,7 +1002,7 @@ p {
 
     .promo__image {
       top: inherit;
-      bottom: 0;
+      bottom: -10px;
       left: inherit;
       right: 0;
       min-width: 285px;
@@ -802,6 +1028,17 @@ p {
       .button {
         max-width: none;
       }
+    }
+  }
+
+  .feedback {
+    .feedback__item {
+      width: calc(100vw - 70px);
+      grid-template-columns: 100%;
+      grid-template-rows: min-content;
+    }
+    .feedback__video {
+      grid-column: inherit;
     }
   }
 }
