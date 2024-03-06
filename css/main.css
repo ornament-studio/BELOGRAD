@@ -468,11 +468,9 @@ body .wrapper .main-page {
   height: 1092px;
   transform: rotate(-55.063deg);
   flex-shrink: 0;
-  top: -320px;
-  left: 40px;
+  top: -246px;
+  left: calc(50% - 718px);
   position: absolute;
-  outline: double;
-  border: none;
 }
 .primary .primary__container {
   position: relative;
@@ -1069,11 +1067,6 @@ body .wrapper .main-page {
   margin-bottom: 20px;
 }
 
-@media (min-width: 1440px) {
-  .primary::before {
-    left: calc(50% - 720px);
-  }
-}
 /* Large desktops and laptops */
 @media (max-width: 1200px) {
   body .wrapper [class*=__container] {
