@@ -27,12 +27,55 @@ $(function () {
     ],
   });
 
+  
+  $(".program__slider").slick({
+    infinite: true,
+    variableWidth: true,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: "unslick",
+      },
+    ],
+  });
+
+  $(".gallery__slider").slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
   $(".benefits__slider").slick({
     infinite: true,
     variableWidth: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-
     responsive: [
       {
         breakpoint: 769,
