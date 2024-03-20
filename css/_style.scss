@@ -4,8 +4,8 @@
 
 @font-face {
   font-family: "Mars Type";
-  src: url(../fonts/marsType/marstype_regular_w.woff) format("woff");
-  src: url(../fonts/marsType/MarsType_Regular.ttf) format("ttf");
+  src: url(../fonts/marsType/marstype_regular_w.woff) format("woff"),
+    url(../fonts/marsType/MarsType_Regular.ttf) format("ttf");
   font-weight: normal;
 }
 
@@ -324,7 +324,6 @@ $textBlack: #080808;
     left: calc(50% - 718px);
     position: absolute;
     box-shadow: 0 0 8px 8px #080808 inset;
-    
   }
 
   .primary__container {

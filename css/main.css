@@ -224,8 +224,7 @@ body .wrapper .main-page {
 
 @font-face {
   font-family: "Mars Type";
-  src: url(../fonts/marsType/marstype_regular_w.woff) format("woff");
-  src: url(../fonts/marsType/MarsType_Regular.ttf) format("ttf");
+  src: url(../fonts/marsType/marstype_regular_w.woff) format("woff"), url(../fonts/marsType/MarsType_Regular.ttf) format("ttf");
   font-weight: normal;
 }
 .headline {
