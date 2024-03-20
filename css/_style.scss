@@ -265,7 +265,7 @@ $textBlack: #080808;
       width: 20px;
       height: 20px;
       position: relative;
-      z-index: 12;
+      z-index: 51;
       overflow: hidden;
     }
 
@@ -323,6 +323,8 @@ $textBlack: #080808;
     top: -246px;
     left: calc(50% - 718px);
     position: absolute;
+    box-shadow: 0 0 8px 8px #080808 inset;
+    
   }
 
   .primary__container {
@@ -1425,7 +1427,7 @@ $textBlack: #080808;
         padding: 0 35px 52px;
         transform: translateX(-100%);
         transition: transform 0.5s;
-        z-index: 10;
+        z-index: 50;
 
         &.active {
           transform: translateX(0);
@@ -1874,7 +1876,7 @@ $textBlack: #080808;
         transform: translate(-50%, 15%);
         right: 25px;
         top: 0;
-        z-index: 13;
+        z-index: 51;
       }
     }
   }

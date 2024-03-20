@@ -1,0 +1,200 @@
+.hands-page {
+  p {
+    font-family: "Arimo";
+    font-size: clamp(14px, 1.11vw, 16px);
+    line-height: 1.3;
+    font-weight: 300;
+  }
+
+  li {
+    font-family: "Arimo";
+    font-size: clamp(14px, 1.11vw, 16px);
+    line-height: 1.3;
+    color: #ffffff;
+    font-weight: 300;
+  }
+
+  .courses .courses__inner {
+    padding-top: 50px;
+
+    .courses__item ul {
+      opacity: 0.7;
+      list-style-type: disc;
+      list-style-position: outside;
+      padding-left: 20px;
+      margin-top: 20px;
+
+      li {
+        margin-bottom: 15px;
+        list-style: inherit;
+      }
+    }
+  }
+
+  .promo {
+    .promo__container {
+    }
+    .promo__inner {
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 70%;
+        opacity: 0.9;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background: linear-gradient(
+          90.75deg,
+          #080808 27.32%,
+          rgba(0, 0, 0, 0.383633) 74.93%,
+          rgba(0, 0, 0, 0) 95.98%
+        );
+      }
+    }
+
+    .promo__subtitle {
+      margin-bottom: 10px;
+      max-width: none;
+    }
+
+    .promo__list {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+
+      li {
+        display: flex;
+        align-items: center;
+        padding-left: 31px;
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        img {
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+          left: 0;
+        }
+
+        span {
+          color: rgba(43, 146, 249, 1);
+        }
+
+        &:not(:last-child) {
+          border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
+        }
+      }
+    }
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 30px;
+
+      .button {
+        &:first-of-type {
+          background: linear-gradient(
+            101.78deg,
+            #5263ff 22.88%,
+            #259fba 79.58%
+          );
+          color: #ffffff;
+
+          span {
+            background-color: #ffffff;
+          }
+
+          &:hover {
+            background: transparent;
+            border: #ffffff solid 1px;
+          }
+        }
+
+        &:last-of-type {
+          @extend %nonColorBtn;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) and (max-width: 1300px) {
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+  }
+
+  /* for inner padding */
+  @media (min-width: 769px) and (max-width: 1200px) {
+  }
+
+  /* Portrait tablets and small desktops */
+  @media (min-width: 769px) and (max-width: 991px) {
+  }
+
+  @media (min-width: 769px) {
+  }
+
+  /* Landscape phones and portrait tablets */
+  @media (max-width: 768px) {
+  }
+
+  /* Portrait phones and smaller */
+  @media (max-width: 480px) {
+    .promo {
+      &:before {
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 572px;
+        width: 456px;
+        z-index: -4;
+        top: 0px;
+        right: -90px;
+
+      }
+
+      .promo__container {
+      }
+      .promo__inner {
+        &::before {
+          display: none;
+        }
+      }
+
+      .promo__image {
+        height: 100%;
+      }
+      .promo__list {
+        max-width: none;
+
+        li {
+          padding-left: 28px;
+
+          padding-top: 10px;
+          padding-bottom: 10px;
+
+          img {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 0;
+          }
+
+          &:not(:last-child) {
+            border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
+          }
+        }
+      }
+      .buttons {
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 205px;
+      }
+    }
+  }
+
+  /* Iphone 5 */
+  @media (max-width: 320px) {
+  }
+}

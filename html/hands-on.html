@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
- <!---------- Шаблон сторінки  Розкладу курсів  ---------->
+
+<!---------- Шаблон сторінки hands-on курс (практичного курсу)   ---------->
 
 <head>
     <meta charset="UTF-8" />
@@ -14,23 +15,22 @@
 
 <body>
     <div class="wrapper">
-        <!---------- header ---------->
         <header class="header" id="header">
             <div class="header__container">
                 <div class="header__nav">
                     <div class="nav-menu">
                         <ul class="menu-list">
                             <li class="menu-item">
-                                <a href="#handsOn-courses" class="menu-link">Hands-on courses</a>
+                                <a href="/html/hands-on.html" class="menu-link">Hands-on courses</a>
                             </li>
                             <li class="menu-item">
-                                <a href="" class="menu-link">One on one </a>
+                                <a href="/html/oneToOne.html" class="menu-link">One on one </a>
                             </li>
                             <li class="menu-item">
                                 <a href="#online-courses" class="menu-link">Online courses</a>
                             </li>
                             <li class="menu-item">
-                                <a href="" class="menu-link">Schedule</a>
+                                <a href="/html/schedule.html" class="menu-link">Schedule</a>
                             </li>
                         </ul>
                     </div>
@@ -38,21 +38,14 @@
                     <div class="nav-menu">
                         <ul class="menu-list">
                             <li class="menu-item">
-                                <a href="#cases-articles" class="menu-link">Cases and Articles</a>
+                                <a href="/html/category.html" class="menu-link">Cases and Articles</a>
                             </li>
                             <li class="menu-item">
-                                <a href="" class="menu-link">About us</a>
+                                <a href="/html/contact.html" class="menu-link">Сontacts</a>
                             </li>
-                            <li class="menu-item">
-                                <a href="#" class="menu-link">Сontacts</a>
-                            </li>
-                            <!-- <li class="menu-item">
-                                <a href="" class="menu-link language-switch">Language: Рос. English</a>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
-                <!-- <div class="header__mobileMenu"> -->
                 <div class="header__burgerIcon">
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
@@ -63,25 +56,22 @@
                     <div class="header__mobileWrapper">
                         <ul class="mobile__menu-list">
                             <li class="menu-item">
-                                <a href="#handsOn-courses" class="menu-link">Hands-on courses</a>
+                                <a href="/html/hands-on.html" class="menu-link">Hands-on courses</a>
                             </li>
                             <li class="menu-item">
-                                <a href="" class="menu-link">One on one </a>
+                                <a href="/html/oneToOne.html" class="menu-link">One on one </a>
                             </li>
                             <li class="menu-item">
                                 <a href="#online-courses" class="menu-link">Online courses</a>
                             </li>
                             <li class="menu-item">
-                                <a href="" class="menu-link">Schedule</a>
+                                <a href="/html/schedule.html" class="menu-link">Schedule</a>
                             </li>
                             <li class="menu-item">
-                                <a href="#cases-articles" class="menu-link">Cases and Articles</a>
+                                <a href="/html/category.html" class="menu-link">Cases and Articles</a>
                             </li>
                             <li class="menu-item">
-                                <a href="" class="menu-link">About us</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#" class="menu-link">Сontacts</a>
+                                <a href="/html/contact.html" class="menu-link">Сontacts</a>
                             </li>
                         </ul>
                         <div class="mobile__icons-list">
@@ -99,36 +89,46 @@
                                 <img src="../images/facebook.svg" alt="" />
                             </a>
                         </div>
-                        <!-- <ul class="language-switch menu-link">
-                                <li>Language:<a href=""> Рос.</a></li>
-                                <li><a href="">English</a></li>
-                            </ul> -->
                     </div>
-
                 </div>
-                <!-- </div> -->
             </div>
         </header>
-        <!---------- header end ---------->
-        <!---------- main page ---------->
-        <main class="schedule-page" id="schedule">
+        <main class="hands-page" id="course">
             <section class="promo" id="bl1">
                 <div class="promo__container">
                     <div class="promo__inner">
                         <ul class="breadcrumb">
                             <li itemtype="http://data-vocabulary.org/Breadcrumb"><a href="" itemprop="url">home</a></li>
-                            <li itemtype="http://data-vocabulary.org/Breadcrumb"><a href="" itemprop="url">Schedule</a>
+                            <li itemtype="http://data-vocabulary.org/Breadcrumb"><a href="" itemprop="url">Hands-on
+                                    courses</a>
                             </li>
                         </ul>
-                        <img class="promo__image desck" src="../images/schedule-main.png" alt="Team photo">
-                        <img class="promo__image mobile" src="../images/main-mob.png" alt="Team photo">
-                        <h1 class="promo__title">schedule</h1>
-                        <h2 class="promo__subtitle">of <span>hands-on</span> courses 2024 <span></span></h2>
-                        <p class="promo__text">Only 100% hands-on!Each course can be attended separately without
-                            consideration of its number and sequence</p>
-                        <div class="promo__buttons">
-                            <a class="promo__btn-blue button" href="">Book your course <span></span></a>
-                            <a class="promo__btn-trns button" href="">Check reviews <span></span></a>
+
+                        <img class="promo__image desck" src="../images/hands-on.png" alt="hands-on photo">
+                        <img class="promo__image mobile" src="../images/hands-on-mob.png" alt="hands-on photo">
+
+                        <h1 class="promo__title">HANDS-ON</h1>
+                        <h2 class="promo__subtitle">module courses</h2>
+                        <ul class="promo__list">
+                            <li>
+                                <img src="../images/head.svg" alt="">
+                                <p>Most effective formats of professional upgrade with <span>100% accent on
+                                        practice.</span></p>
+                            </li>
+                            <li>
+                                <img src="../images/person.svg" alt="">
+                                <p>We designed only those programs that <span>will be useful for practicing</span>
+                                    dentists and that can be <span>applied immediately after</span> our courses.</p>
+                            </li>
+                            <li>
+                                <img src="../images/apple.svg" alt="">
+                                <p><span>Each module can be attended separately</span> without consideration of its
+                                    number and seqance.</p>
+                            </li>
+                        </ul>
+                        <div class="buttons">
+                            <a href="" class="button">Book your course <span></span></a>
+                            <a href="" class="button">Check reviews <span></span></a>
                         </div>
                     </div>
                 </div>
@@ -136,156 +136,140 @@
             <section class="courses" id="bl2">
                 <div class="courses__container">
                     <div class="courses__inner">
-                        <h2 class="courses__title">Our Hands-on courses</h2>
                         <div class="courses__items">
                             <div class="courses__item">
                                 <div class="poster">
                                     <a href=""></a>
-                                    <img src="../images/cases1.png" alt="poster">
+                                    <img src="../images/hand-course.png" alt="poster">
                                 </div>
                                 <div class="content">
                                     <a href="">
-                                        <h3 class="title">Implant Microsurgery.
-                                            Basic intensive course</h3>
+                                        <h3 class="title">BIG Prep Course. Mastering veneer, crown and overlay
+                                            preparations</h3>
                                     </a>
-                                    <p class="excerpt">Take your start in implant-microsurgery and surgery with a
-                                        magnification. 3 days hands-on course for good start in implantology...</p>
-                                    <p class="date">Nearest date: April 12-14, 2024</p>
-                                    <ul title="Next dates:" class="next">
-                                        <li> December 15-16, 2023</li>
-                                        <li> January 19-20, 2024</li>
-                                        <li> March 09-10, 2024</li>
+                                    <ul class="list">
+                                        <li><p>Instead of 1000 words you will get more than  20 real clinical
+                                            situations for practicing and improving prep skills. Preparation of anterior
+                                            and posterior teeth on upper and lower jaws for different types of ceramic
+                                            restorations will be performed.</p></li>
+                                        <li><p>All that was collected during years you will pass only within 2 days.</p></li>
                                     </ul>
+                                    <p class="excerpt">Original formula of training: 100% hands-on. Proved clinical results by
+                                        colleagues attended this course.</p>
                                     <a href="" class="more button">Learn more <span></span></a>
                                 </div>
                             </div>
                             <div class="courses__item">
                                 <div class="poster">
                                     <a href=""></a>
-                                    <img src="../images/cases1.png" alt="poster">
+                                    <img src="../images/hand-course.png" alt="poster">
                                 </div>
                                 <div class="content">
                                     <a href="">
-                                        <h3 class="title">Implant Microsurgery.
-                                            Basic intensive course</h3>
+                                        <h3 class="title">BIG Prep Course. Mastering veneer, crown and overlay
+                                            preparations</h3>
                                     </a>
-                                    <p class="excerpt">Take your start in implant-microsurgery and surgery with a
-                                        magnification. 3 days hands-on course for good start in implantology...</p>
-                                    <p class="date">Nearest date: <span>November 12-14, 2024</span> <span
-                                            class="booked">fully booked</span></p>
-                                    <ul title="Next dates:" class="next">
-                                        <li> December 15-16, 2023</li>
-                                        <li> January 19-20, 2024</li>
-                                        <li> March 09-10, 2024</li>
+                                    <ul class="list">
+                                        <li><p>Instead of 1000 words you will get more than  20 real clinical
+                                            situations for practicing and improving prep skills. Preparation of anterior
+                                            and posterior teeth on upper and lower jaws for different types of ceramic
+                                            restorations will be performed.</p></li>
+                                        <li><p>All that was collected during years you will pass only within 2 days.</p></li>
                                     </ul>
+                                    <p class="excerpt">Original formula of training: 100% hands-on. Proved clinical results by
+                                        colleagues attended this course.</p>
                                     <a href="" class="more button">Learn more <span></span></a>
                                 </div>
                             </div>
                             <div class="courses__item">
                                 <div class="poster">
                                     <a href=""></a>
-                                    <img src="../images/cases1.png" alt="poster">
+                                    <img src="../images/hand-course.png" alt="poster">
                                 </div>
                                 <div class="content">
                                     <a href="">
-                                        <h3 class="title">Implant Microsurgery.
-                                            Basic intensive course</h3>
+                                        <h3 class="title">BIG Prep Course. Mastering veneer, crown and overlay
+                                            preparations</h3>
                                     </a>
-                                    <p class="excerpt">Take your start in implant-microsurgery and surgery with a
-                                        magnification. 3 days hands-on course for good start in implantology...</p>
-                                    <p class="date">Nearest date: <span>April 12-14, 2024</span></p>
-                                    <ul title="Next dates:" class="next">
-                                        <li> December 15-16, 2023</li>
-                                        <li> January 19-20, 2024</li>
-                                        <li> March 09-10, 2024</li>
+                                    <ul class="list">
+                                        <li><p>Instead of 1000 words you will get more than  20 real clinical
+                                            situations for practicing and improving prep skills. Preparation of anterior
+                                            and posterior teeth on upper and lower jaws for different types of ceramic
+                                            restorations will be performed.</p></li>
+                                        <li><p>All that was collected during years you will pass only within 2 days.</p></li>
                                     </ul>
+                                    <p class="excerpt">Original formula of training: 100% hands-on. Proved clinical results by
+                                        colleagues attended this course.</p>
                                     <a href="" class="more button">Learn more <span></span></a>
                                 </div>
                             </div>
                             <div class="courses__item">
                                 <div class="poster">
                                     <a href=""></a>
-                                    <img src="../images/cases1.png" alt="poster">
+                                    <img src="../images/hand-course.png" alt="poster">
                                 </div>
                                 <div class="content">
                                     <a href="">
-                                        <h3 class="title">Implant Microsurgery.
-                                            Basic intensive course</h3>
+                                        <h3 class="title">BIG Prep Course. Mastering veneer, crown and overlay
+                                            preparations</h3>
                                     </a>
-                                    <p class="excerpt">Take your start in implant-microsurgery and surgery with a
-                                        magnification. 3 days hands-on course for good start in implantology...</p>
-                                    <p class="date">Nearest date: <span>november 12-14, 2024</span></p>
-                                    <ul title="Next dates:" class="next">
-                                        <li> December 15-16, 2023</li>
-                                        <li> January 19-20, 2024</li>
-                                        <li> March 09-10, 2024</li>
+                                    <ul class="list">
+                                        <li><p>Instead of 1000 words you will get more than  20 real clinical
+                                            situations for practicing and improving prep skills. Preparation of anterior
+                                            and posterior teeth on upper and lower jaws for different types of ceramic
+                                            restorations will be performed.</p></li>
+                                        <li><p>All that was collected during years you will pass only within 2 days.</p></li>
                                     </ul>
+                                    <p class="excerpt">Original formula of training: 100% hands-on. Proved clinical results by
+                                        colleagues attended this course.</p>
                                     <a href="" class="more button">Learn more <span></span></a>
                                 </div>
                             </div>
                             <div class="courses__item">
                                 <div class="poster">
                                     <a href=""></a>
-                                    <img src="../images/cases1.png" alt="poster">
+                                    <img src="../images/hand-course.png" alt="poster">
                                 </div>
                                 <div class="content">
                                     <a href="">
-                                        <h3 class="title">Implant Microsurgery.
-                                            Basic intensive course</h3>
+                                        <h3 class="title">BIG Prep Course. Mastering veneer, crown and overlay
+                                            preparations</h3>
                                     </a>
-                                    <p class="excerpt">Take your start in implant-microsurgery and surgery with a
-                                        magnification. 3 days hands-on course for good start in implantology...</p>
-                                    <p class="date">Nearest date: November 12-14, 2024</p>
-                                    <ul title="Next dates:" class="next">
-                                        <li> December 15-16, 2023</li>
-                                        <li> January 19-20, 2024</li>
-                                        <li> March 09-10, 2024</li>
+                                    <ul class="list">
+                                        <li><p>Instead of 1000 words you will get more than  20 real clinical
+                                            situations for practicing and improving prep skills. Preparation of anterior
+                                            and posterior teeth on upper and lower jaws for different types of ceramic
+                                            restorations will be performed.</p></li>
+                                        <li><p>All that was collected during years you will pass only within 2 days.</p></li>
                                     </ul>
+                                    <p class="excerpt">Original formula of training: 100% hands-on. Proved clinical results by
+                                        colleagues attended this course.</p>
                                     <a href="" class="more button">Learn more <span></span></a>
                                 </div>
                             </div>
                             <div class="courses__item">
                                 <div class="poster">
                                     <a href=""></a>
-                                    <img src="../images/cases1.png" alt="poster">
+                                    <img src="../images/hand-course.png" alt="poster">
                                 </div>
                                 <div class="content">
                                     <a href="">
-                                        <h3 class="title">Implant Microsurgery.
-                                            Basic intensive course</h3>
+                                        <h3 class="title">BIG Prep Course. Mastering veneer, crown and overlay
+                                            preparations</h3>
                                     </a>
-                                    <p class="excerpt">Take your start in implant-microsurgery and surgery with a
-                                        magnification. 3 days hands-on course for good start in implantology...</p>
-                                    <p class="date">Nearest date: April 12-14, 2024</p>
-                                    <ul title="Next dates:" class="next">
-                                        <li> December 15-16, 2023</li>
-                                        <li> January 19-20, 2024</li>
-                                        <li> March 09-10, 2024</li>
+                                    <ul class="list">
+                                        <li><p>Instead of 1000 words you will get more than  20 real clinical
+                                            situations for practicing and improving prep skills. Preparation of anterior
+                                            and posterior teeth on upper and lower jaws for different types of ceramic
+                                            restorations will be performed.</p></li>
+                                        <li><p>All that was collected during years you will pass only within 2 days.</p></li>
                                     </ul>
+                                    <p class="excerpt">Original formula of training: 100% hands-on. Proved clinical results by
+                                        colleagues attended this course.</p>
                                     <a href="" class="more button">Learn more <span></span></a>
                                 </div>
                             </div>
-                            <div class="courses__item">
-                                <div class="poster">
-                                    <a href=""></a>
-                                    <img src="../images/cases1.png" alt="poster">
-                                </div>
-                                <div class="content">
-                                    <a href="">
-                                        <h3 class="title">Implant Microsurgery.
-                                            Basic intensive course</h3>
-                                    </a>
-                                    <p class="excerpt">Take your start in implant-microsurgery and surgery with a
-                                        magnification. 3 days hands-on course for good start in implantology...</p>
-                                    <p class="date">Nearest date: April 12-14, 2024</p>
-                                    <ul title="Next dates:" class="next">
-                                        <li> December 15-16, 2023</li>
-                                        <li> January 19-20, 2024</li>
-                                        <li> March 09-10, 2024</li>
-                                    </ul>
-                                    <a href="" class="more button">Learn more <span></span></a>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                     <a href="" class="courses__btn button mobile">Load more courses <span></span></a>
@@ -386,7 +370,7 @@
                                 <video src="../images/video.mp4"></video>
                             </div>
                         </div>
-          
+
 
                     </div>
                 </div>
@@ -474,8 +458,6 @@
                 </div>
             </section>
         </main>
-        <!---------- page end ---------->
-        <!---------- footer ---------->
         <footer class="footer grey">
             <div class="footer__container bg-cover">
                 <div class="footer__inner">
@@ -574,7 +556,6 @@
                 </div>
             </div>
         </footer>
-        <!---------- footer end ---------->
     </div>
     <script src="../js/jquery.js"></script>
     <script src="../js/slick.min.js"></script>

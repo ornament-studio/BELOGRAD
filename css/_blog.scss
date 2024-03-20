@@ -5,7 +5,7 @@
 .blog {
   background-image: url(../images/bottom-back.png);
   background-size: 100% auto;
-  background-position: bottom;
+  background-position: left 0 bottom -466px;
   background-repeat: no-repeat;
   padding-bottom: 100px;
 }
@@ -21,9 +21,8 @@
   background-repeat: no-repeat;
   padding-bottom: 100px;
   position: relative;
+  background: linear-gradient(180deg, #080808 0%, #1d1d1d 100%);
 
-  background: linear-gradient(180deg, #080808 0%, #1D1D1D 100%);
-  
   &::after {
     position: absolute;
     top: 0;
@@ -33,7 +32,7 @@
     content: "";
     display: block;
     background: linear-gradient(180deg, rgba(8, 8, 8, 0) 0%, #080808 100%);
-    z-index: 2;
+    z-index: -1;
   }
 }
 .breadcrumb {
@@ -44,7 +43,7 @@
   margin-bottom: 60px;
   z-index: 5;
 }
-.blog__filter {
+.filter {
   z-index: 5;
   display: flex;
   gap: 30px;
@@ -58,7 +57,7 @@
     color: #ffffff;
   }
 
-  ul {
+  .filter__list {
     display: flex;
     gap: 20px;
 
@@ -74,7 +73,7 @@
         font-size: 16px;
         font-family: "Arimo";
         line-height: 20px;
-        font-weight: 30px;
+        font-weight: 300;
         color: #ffffff;
       }
     }
@@ -148,4 +147,218 @@
   @extend %blueBtn;
   z-index: 5;
   position: relative;
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* for inner padding */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .blog {
+    padding-bottom: reWidth(100);
+  }
+
+  .blog__inner {
+    padding: reWidth(50) reWidth(50) reWidth(60);
+    padding-bottom: reWidth(100);
+  }
+
+  .blog__title {
+    margin-bottom: reWidth(60);
+  }
+  .filter {
+    gap: reWidth(30);
+    margin-bottom: reWidth(30);
+  }
+  .blog__list {
+    gap: reWidth(20) reWidth(15);
+  }
+
+  .article {
+    .article__body {
+      padding: reWidth(30) reWidth(20) reWidth(20);
+      gap: reWidth(20);
+    }
+  }
+
+  .blog__btn-blue {
+    margin-top: reWidth(30);
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 769px) and (max-width: 991px) {
+  .blog__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 769px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+  .blog {
+    background-image: none;
+    padding-bottom: 60px;
+  }
+  .blog__inner {
+    padding: 20px 20px 60px;
+    border-radius: 15px;
+    background-image: none;
+    padding-bottom: 60px;
+    background: linear-gradient(180deg, #080808 0%, #1d1d1d 100%);
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .blog__title {
+    margin-bottom: 50px;
+  }
+  .filter {
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    z-index: 10;
+    max-width: 400px;
+
+    .filter__show {
+      opacity: 1;
+      font-size: 18px;
+      line-height: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      background-color: #1b1b1b;
+      padding: 15px 0;
+      transition: all 0.2s ease-out;
+      cursor: pointer;
+
+      span {
+        font-size: 0;
+        margin-left: 5px;
+        content: url(../images/show.svg);
+      }
+    }
+
+    .filter__list {
+      gap: 10px;
+      background-color: #394acb;
+      border-radius: 0 0 5px 5px;
+      padding: 30px;
+      flex-direction: column;
+
+      position: absolute;
+      top: 100%;
+      z-index: 3;
+      width: 100%;
+
+      overflow: hidden;
+
+      height: 0px;
+      transition: height 1s ease-out;
+      -webkit-transform: scaleY(0);
+      -o-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+      transform: scaleY(0);
+      float: left;
+      display: block;
+
+      li {
+        &:not(:last-child) {
+          padding-bottom: 10px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        &.current_page_item {
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &.open {
+      .filter__show {
+        border-radius: 5px 5px 0 0;
+        transition: all 0.4s ease-out;
+        span {
+          transform: rotate(180deg);
+        }
+      }
+
+      .filter__list {
+        height: fit-content;
+        padding: 30px;
+
+        height: fit-content;
+        display: flex;
+        -webkit-transform: scaleY(1);
+        -o-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: top;
+        -o-transform-origin: top;
+        -ms-transform-origin: top;
+        transform-origin: top;
+        -webkit-transition: -webkit-transform 0.4s ease-out;
+        -o-transition: -o-transform 0.4s ease;
+        -ms-transition: -ms-transform 0.4s ease;
+        transition: transform 0.4s ease;
+        box-sizing: border-box;
+      }
+    }
+  }
+  .blog__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .article {
+    border-radius: 10px;
+
+    .article__body {
+      gap: 15px;
+    }
+
+    .article__about {
+      line-height: 18px;
+    }
+    .article__title {
+      a {
+        line-height: 25px;
+      }
+    }
+
+    .article__data {
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 5px;
+    }
+  }
+
+  .blog__btn-blue {
+    margin-top: 30px;
+    @extend %blueBtn;
+    z-index: 5;
+    position: relative;
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .blog__list {
+    grid-template-columns: 100%;
+    gap: 15px;
+  }
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
 }

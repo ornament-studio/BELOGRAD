@@ -1,3 +1,5 @@
+// sliders
+
 $(function () {
   $(".programs__slider").slick({
     infinite: true,
@@ -27,7 +29,6 @@ $(function () {
     ],
   });
 
-  
   $(".program__slider").slick({
     infinite: true,
     variableWidth: true,
@@ -190,6 +191,7 @@ $(function () {
   });
 });
 
+// smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -200,6 +202,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+// open mobile menu
 let menuBtn = document.querySelector(".header__burgerIcon");
 let menu = document.querySelector(".header__mobileNav");
 let menuLinks = document.querySelectorAll(".menu-item");
@@ -241,8 +244,31 @@ function toggleItem() {
   }
 }
 
-let video = document.getElementById("video-frame");
+// show filter list
 
+let filterBtn = document.querySelector(".filter__show");
+let filter = document.querySelector(".filter");
+
+filterBtn.addEventListener("click", function () {
+  filter.classList.toggle("open");
+});
+
+//close filter
+const selectList = document.querySelectorAll(".filter__list");
+document.addEventListener("DOMContentLoaded", () => {
+  // Структура страницы загружена и готова к взаимодействию
+  window.addEventListener("click", (e) => {
+    // при клике в любом месте окна браузера
+    const target = e.target; // находим элемент, на котором был клик
+    if (!target.closest(".filter__show") && !target.closest(".filter")) {
+      // если этот элемент или его родительские элементы не окно навигации и не кнопка
+      filter.classList.remove("open");
+    }
+  });
+});
+
+// video block
+let video = document.getElementById("video-frame");
 video.controls = false;
 video.addEventListener("click", function () {
   if (video.paused) {
