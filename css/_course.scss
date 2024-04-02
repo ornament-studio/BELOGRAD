@@ -277,6 +277,7 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+        position: relative;
       }
     }
     .dark-blue {
@@ -779,6 +780,14 @@
     }
   }
 
+
+  .feedback {
+    h4,
+    p {
+      color: #080808;
+    }
+  }
+
   @media (min-width: 1200px) and (max-width: 1300px) {
     .intro {
       margin-top: 30px;
@@ -1190,12 +1199,7 @@
       }
     }
 
-    .feedback {
-      h4,
-      p {
-        color: #080808;
-      }
-    }
+
   }
 
   /* Portrait phones and smaller */

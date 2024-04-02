@@ -3552,6 +3552,9 @@ p {
   .single-page .sidebar {
     padding: 100px 0 150px 20px;
   }
+  .single-page .sidebar h3 {
+    padding-right: 25px;
+  }
   .single-page .sidebar .sidebar__article {
     opacity: 0.4;
     max-width: calc(100vw - 110px);
@@ -3818,6 +3821,7 @@ p {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: relative;
 }
 .course-page .intro .dark-blue {
   background-color: rgba(0, 0, 0, 0.6);
@@ -4225,6 +4229,10 @@ p {
 .course-page .cost .button {
   margin-top: 30px;
 }
+.course-page .feedback h4,
+.course-page .feedback p {
+  color: #080808;
+}
 @media (min-width: 1200px) and (max-width: 1300px) {
   .course-page .intro {
     margin-top: 30px;
@@ -4560,10 +4568,6 @@ p {
   .course-page .cost .cost__buy {
     border-radius: 0 0 10px 10px;
     padding: 25px 20px;
-  }
-  .course-page .feedback h4,
-  .course-page .feedback p {
-    color: #080808;
   }
 }
 @media (max-width: 480px) {

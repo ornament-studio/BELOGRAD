@@ -76,8 +76,10 @@ if (video !== null) {
   video.addEventListener("click", function () {
     if (video.paused) {
       video.play();
+      video.style.zIndex = '10';
     } else {
       video.pause();
+      video.style.zIndex = '1';
     }
     video.controls = true;
   });
@@ -92,7 +94,7 @@ if (sliders.length > 0) {
       perMove: 1,
       perPage: 3,
       gap: "15px",
-      type: "loop",
+      type: 'loop',
       pagination: false,
       autoWidth: true,
       breakpoints: {
@@ -103,11 +105,8 @@ if (sliders.length > 0) {
       breakpoints: {
         770: {
           perPage: 1,
-        },
-      },
-      breakpoints: {
-        480: {
-          gap: "10px",
+          gap: '10px',
+          type: 'splide',
         },
       },
     }).mount();
@@ -125,6 +124,7 @@ if (document.querySelector(".feedback__slider")) {
       770: {
         perPage: 1,
         gap: "10px",
+        type: 'splide',
       },
     },
   }).mount();
@@ -167,6 +167,7 @@ if (document.querySelector(".gallery__slider")) {
     breakpoints: {
       480: {
         perPage: 1,
+        
       },
     },
   }).mount();
@@ -177,6 +178,7 @@ if (document.querySelector(".sidebar__slider")) {
     perMove: 1,
     perPage: 1,
     gap: '10px',
+    type: 'splide',
     pagination: false,
     mediaQuery: "min",
     breakpoints: {
@@ -209,8 +211,8 @@ if (document.querySelector(".handsOn__slider")) {
 // hover effect for mobile
 let elementsForHover = document.querySelectorAll('.hoverForMobile');
 
-if (elements.length > 0) { 
-  elements.forEach((element) => {
+if (elementsForHover.length > 0) { 
+  elementsForHover.forEach((element) => {
     // Add touchstart event listener
     element.addEventListener('touchstart', () => {
       element.classList.add('touch-hover-effect');
