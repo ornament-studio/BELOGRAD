@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
- <!---------- Шаблон сторінки Курс Один на один  ---------->
+<!---------- Шаблон сторінки Курс Один на один  ---------->
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Belograd Agency</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/slick-theme.css">
-    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/splide.min.css">
 </head>
 
 <body>
     <div class="wrapper">
+        <!---------- header ---------->
         <header class="header" id="header">
             <div class="header__container">
                 <div class="header__nav">
@@ -33,7 +33,7 @@
                             </li>
                         </ul>
                     </div>
-                    <img src="../images/logo.svg" alt="logo" />
+                    <img class="header__logo" src="../images/logo.png" alt="logo" />
                     <div class="nav-menu">
                         <ul class="menu-list">
                             <li class="menu-item">
@@ -46,6 +46,7 @@
                     </div>
                 </div>
                 <div class="header__burgerIcon">
+                    <span class="word">Menu</span>
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
@@ -161,57 +162,74 @@
                         <h2 class="program__title">Program</h2>
                         <p class="program__subtitle">Original formula of training: 100% hands-on. Proved clinical
                             results by colleagues attended this course.</p>
-                        <div class="program__list program__slider">
-                            <div class="program__item">
-                                <div class="cover">
-                                    <img src="../images/program-1.png" alt="">
-                                </div>
-                                <div class="body">
-                                    <p class="modul">MODULE 1</p>
-                                    <h4 class="name">Mastering tooth preparation for veneers, crowns, onlays</h4>
-                                    <p>Instead of 1000 words you will get 25 real clinical situations for practicing and
-                                        improve skills. All that was collected during years you will pass only within 3
-                                        days. Original formula of training: 10% theory 90% practice.</p>
-                                </div>
-                            </div>
-                            <div class="program__item">
-                                <div class="cover">
-                                    <img src="../images/program-2.png" alt="">
-                                </div>
-                                <div class="body">
-                                    <p class="modul">MODULE 2</p>
-                                    <h4 class="name">All about composite restorations and RUBBERDAMology</h4>
-                                    <p>Would you like to match the color and do less occlusal corrections? To get
-                                        perfect contact points and fit? To achieve aesthetic results and to learn how to
-                                        perform great modeling? Then this course is for you! All modern concepts and
-                                        schools are collected here.</p>
-                                </div>
-                            </div>
-                            <div class="program__item">
-                                <div class="cover">
-                                    <img src="../images/program-3.png" alt="">
-                                </div>
-                                <div class="body">
-                                    <p class="modul">MODULE 3</p>
-                                    <h4 class="name">All about veneers. <br>Full course from smile design to bonding
-                                    </h4>
-                                    <p>Aesthetics from smile design to veneer bonding. On this course you will get what
-                                        is taught on 6 separate programs. What does it mean? Your time will be used with
-                                        maximum efficiency and you will have only what is really needed for practice.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="program__item">
-                                <div class="cover">
-                                    <img src="../images/program-3.png" alt="">
-                                </div>
-                                <div class="body">
-                                    <p class="modul">MODULE 4</p>
-                                    <h4 class="name">Mastering tooth preparation for veneers, crowns, onlays</h4>
-                                    <p>Instead of 1000 words you will get 25 real clinical situations for practicing and
-                                        improve skills. All that was collected during years you will pass only within 3
-                                        days. Original formula of training: 10% theory 90% practice.</p>
-                                </div>
+                        <div class="program__list  splide" role="group" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="program__item splide__slide">
+                                        <div class="cover">
+                                            <img src="../images/program-1.png" alt="">
+                                        </div>
+                                        <div class="body">
+                                            <p class="modul">MODULE 1</p>
+                                            <h3 class="name">Mastering tooth preparation for veneers, crowns, onlays
+                                            </h3>
+                                            <p>Instead of 1000 words you will get 25 real clinical situations for
+                                                practicing and
+                                                improve skills. All that was collected during years you will pass only
+                                                within 3
+                                                days. Original formula of training: 10% theory 90% practice.</p>
+                                        </div>
+                                    </li>
+                                    <li class="program__item splide__slide">
+                                        <div class="cover">
+                                            <img src="../images/program-2.png" alt="">
+                                        </div>
+                                        <div class="body">
+                                            <p class="modul">MODULE 2</p>
+                                            <h3 class="name">All about composite restorations and RUBBERDAMology</h3>
+                                            <p>Would you like to match the color and do less occlusal corrections? To
+                                                get
+                                                perfect contact points and fit? To achieve aesthetic results and to
+                                                learn how to
+                                                perform great modeling? Then this course is for you! All modern concepts
+                                                and
+                                                schools are collected here.</p>
+                                        </div>
+                                    </li>
+                                    <li class="program__item splide__slide">
+                                        <div class="cover">
+                                            <img src="../images/program-3.png" alt="">
+                                        </div>
+                                        <div class="body">
+                                            <p class="modul">MODULE 3</p>
+                                            <h3 class="name">All about veneers. <br>Full course from smile design to
+                                                bonding
+                                            </h3>
+                                            <p>Aesthetics from smile design to veneer bonding. On this course you will
+                                                get what
+                                                is taught on 6 separate programs. What does it mean? Your time will be
+                                                used with
+                                                maximum efficiency and you will have only what is really needed for
+                                                practice.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="program__item splide__slide">
+                                        <div class="cover">
+                                            <img src="../images/program-3.png" alt="">
+                                        </div>
+                                        <div class="body">
+                                            <p class="modul">MODULE 4</p>
+                                            <h3 class="name">Mastering tooth preparation for veneers, crowns, onlays
+                                            </h3>
+                                            <p>Instead of 1000 words you will get 25 real clinical situations for
+                                                practicing and
+                                                improve skills. All that was collected during years you will pass only
+                                                within 3
+                                                days. Original formula of training: 10% theory 90% practice.</p>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <a href="" class="button">Sign up <span></span></a>
@@ -220,35 +238,19 @@
             </section>
             <section class="gallery">
                 <h2 class="gallery__title">We can also create an individual program for each participant.</h2>
-                <div class="gallery__slider">
-                    <div class="gallery__item">
-                        <img src="../images/gallery-1.jpeg" alt="">
-                    </div>
-                    <div class="gallery__item">
-                        <img src="../images/gallery-2.jpeg" alt="">
-                    </div>
-                    <div class="gallery__item">
-                        <img src="../images/gallery-3.jpeg" alt="">
-                    </div>
-                    <div class="gallery__item">
-                        <img src="../images/gallery-4.jpeg" alt="">
-                    </div>
-                    <div class="gallery__item">
-                        <img src="../images/gallery-5.jpeg" alt="">
-                    </div>
-
-                    <div class="gallery__item">
-                        <img src="../images/gallery-6.jpeg" alt="">
-                    </div>
-
-                    <div class="gallery__item">
-                        <img src="../images/gallery-7.jpeg" alt="">
-                    </div>
-                    <div class="gallery__item">
-                        <img src="../images/gallery-8.jpeg" alt="">
-                    </div>
-                    <div class="gallery__item">
-                        <img src="../images/gallery-9.jpeg" alt="">
+                <div class="gallery__slider splide" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="gallery__item splide__slide"><img src="../images/gallery-1.jpeg" alt=""></li>
+                            <li class="gallery__item splide__slide"> <img src="../images/gallery-2.jpeg" alt=""></li>
+                            <li class="gallery__item splide__slide"> <img src="../images/gallery-3.jpeg" alt=""></li>
+                            <li class="gallery__item splide__slide"> <img src="../images/gallery-4.jpeg" alt=""></li>
+                            <li class="gallery__item splide__slide"><img src="../images/gallery-5.jpeg" alt=""></li>
+                            <li class="gallery__item splide__slide"> <img src="../images/gallery-6.jpeg" alt=""></li>
+                            <li class="gallery__item splide__slide"> <img src="../images/gallery-7.jpeg" alt=""></li>
+                            <li class="gallery__item splide__slide"> <img src="../images/gallery-8.jpeg" alt=""></li>
+                            <li class="gallery__item splide__slide"><img src="../images/gallery-9.jpeg" alt=""></li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -264,13 +266,13 @@
                                     <ul title="Dates:">
                                         <li> Discussed personally </li>
                                         <li> Right after any of module courses <br>
-                                            <span>(you can check schedule here)</span>
+                                            <a href="schedule.html"><span>(you can check schedule here)</span></a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="cost">
                                     <div class="text">
-                                        <p>€2000 +21% VAT</p>
+                                        <p>EUR 3 500 +21% VAT</p>
                                         <span>* VAT is for European Union countries delegates only</span>
                                     </div>
                                     <a href="" class="button">Booking <span></span></a>
@@ -280,16 +282,16 @@
                                 <div class="about">
                                     <h4 class="title">One on One <span>* per one day</span></h4>
                                     <h6 class="dates">Dates:</h6>
-                                    <ul title="Dates:" >
+                                    <ul title="Dates:">
                                         <li> Discussed personally </li>
                                         <li> Right after any of module courses <br>
-                                            <span>(you can check schedule here)</span>
+                                            <a href="schedule.html"><span>(you can check schedule here)</span></a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="cost">
                                     <div class="text">
-                                        <p>€2000 +21% VAT</p>
+                                        <p>EUR 3 000 +21% VAT</p>
                                         <span>* VAT is for European Union countries delegates only</span>
                                     </div>
                                     <a href="" class="button">Booking <span></span></a>
@@ -343,103 +345,112 @@
                 </div>
 
             </section>
+
+            <!---------- Section Feedback ---------->
             <section class="feedback" id="bl4">
                 <div class="feedback__container">
                     <h2 class="feedback__title">Feedbacks</h2>
-                    <div class="feedback__slider">
-                        <div class="feedback__item">
-                            <div class="feedback__user user">
-                                <div class="user__photo">
-                                    <img src="../images/user.svg" alt="user" />
-                                </div>
-                                <div class="user__name">
-                                    <h4>Elmer Baker</h4>
-                                    <p>
-                                        dentist from Ukraine, clinic owner
+                    <div class=" feedback__slider splide" role="group" aria-label="Splide Basic HTML Example">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class=" feedback__item splide__slide">
+                                    <div class="feedback__user user">
+                                        <div class="user__photo">
+                                            <img src="../images/user.svg" alt="user" />
+                                        </div>
+                                        <div class="user__name">
+                                            <h4>Elmer Baker</h4>
+                                            <p>
+                                                dentist from Ukraine, clinic owner
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="feedback__text">
+                                        Я прошел один из обучающих модулей на учебной вилле Макса
+                                        по работе с керамическими реставрациями. Это был самый
+                                        насыщеный практический семинар из всех, что были за всю
+                                        мою врачебную практику!
                                     </p>
-                                </div>
-                            </div>
-                            <p class="feedback__text">
-                                Я прошел один из обучающих модулей на учебной вилле Макса
-                                по работе с керамическими реставрациями. Это был самый
-                                насыщеный практический семинар из всех, что были за всю
-                                мою врачебную практику!
-                            </p>
-                            <blockquote>
-                                <p>Максим Белоград самый крутой и мотивирующий лектор мирового уровня!</p>
-                            </blockquote>
-                        </div>
-                        <div class="feedback__item">
-                            <div class="feedback__user user">
-                                <div class="user__photo">
-                                    <img src="../images/user.svg" alt="user" />
-                                </div>
-                                <div class="user__name">
-                                    <h4>Elmer Baker</h4>
-                                    <p>
-                                        dentist from Ukraine, clinic owner
+                                    <blockquote>
+                                        <span>“</span>
+                                        <p>Максим Белоград самый крутой и мотивирующий лектор мирового уровня!</p>
+                                    </blockquote>
+                                </li>
+                                <li class=" feedback__item splide__slide">
+                                    <div class="feedback__user user">
+                                        <div class="user__photo">
+                                            <img src="../images/user.svg" alt="user" />
+                                        </div>
+                                        <div class="user__name">
+                                            <h4>Elmer Baker</h4>
+                                            <p>
+                                                dentist from Ukraine, clinic owner
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="feedback__text">
+                                        Я прошел один из обучающих модулей на учебной вилле Макса
+                                        по работе с керамическими реставрациями. Это был самый
+                                        насыщеный практический семинар из всех, что были за всю
+                                        мою врачебную практику!
                                     </p>
-                                </div>
-                            </div>
-                            <p class="feedback__text">
-                                Я прошел один из обучающих модулей на учебной вилле Макса
-                                по работе с керамическими реставрациями. Это был самый
-                                насыщеный практический семинар из всех, что были за всю
-                                мою врачебную практику!
-                            </p>
-                            <blockquote>
-                                <span>“</span>
-                                <p>Максим Белоград самый крутой и мотивирующий лектор мирового уровня!</p>
-                            </blockquote>
-                        </div>
-
-                        <div class="feedback__item">
-                            <div class="feedback__user user">
-                                <div class="user__photo">
-                                    <img src="../images/user.svg" alt="user" />
-                                </div>
-                                <div class="user__name">
-                                    <h4 class="name">Elmer Baker</h4>
-                                    <p class="position">
-                                        dentist from Ukraine, clinic owner
+                                    <blockquote>
+                                        <span>“</span>
+                                        <p>Максим Белоград самый крутой и мотивирующий лектор мирового уровня!</p>
+                                    </blockquote>
+                                </li>
+                                <li class=" feedback__item splide__slide">
+                                    <div class="feedback__user user">
+                                        <div class="user__photo">
+                                            <img src="../images/user.svg" alt="user" />
+                                        </div>
+                                        <div class="user__name">
+                                            <h4 class="name">Elmer Baker</h4>
+                                            <p class="position">
+                                                dentist from Ukraine, clinic owner
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="feedback__text">
+                                        Я прошел один из обучающих модулей на учебной вилле Макса
+                                        по работе с керамическими реставрациями. Это был самый
+                                        насыщеный практический семинар из всех, что были за всю
+                                        мою врачебную практику!
                                     </p>
-                                </div>
-                            </div>
-                            <p class="feedback__text">
-                                Я прошел один из обучающих модулей на учебной вилле Макса
-                                по работе с керамическими реставрациями. Это был самый
-                                насыщеный практический семинар из всех, что были за всю
-                                мою врачебную практику!
-                            </p>
-                            <div class="feedback__video">
-                                <video src="../images/video.mp4"></video>
-                            </div>
-                        </div>
-
-                        <div class="feedback__item">
-                            <div class="feedback__user user">
-                                <div class="user__photo">
-                                    <img src="../images/user.svg" alt="user" />
-                                </div>
-                                <div class="user__name">
-                                    <h4 class="name">Elmer Baker</h4>
-                                    <p class="position">
-                                        dentist from Ukraine, clinic owner
+                                    <div class="feedback__video">
+                                        <video id="video-frame" controls controlsList="nodownload"
+                                            src="../images/video.mp4" width="678" height="381"
+                                            allowfullscreen="allowfullscreen" poster="../images/cover-single.png">
+                                        </video>
+                                    </div>
+                                </li>
+                                <li class="feedback__item splide__slide">
+                                    <div class="feedback__user user">
+                                        <div class="user__photo">
+                                            <img src="../images/user.svg" alt="user" />
+                                        </div>
+                                        <div class="user__name">
+                                            <h4 class="name">Elmer Baker</h4>
+                                            <p class="position">
+                                                dentist from Ukraine, clinic owner
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="feedback__text">
+                                        Я прошел один из обучающих модулей на учебной вилле Макса
+                                        по работе с керамическими реставрациями. Это был самый
+                                        насыщеный практический семинар из всех, что были за всю
+                                        мою врачебную практику!
                                     </p>
-                                </div>
-                            </div>
-                            <p class="feedback__text">
-                                Я прошел один из обучающих модулей на учебной вилле Макса
-                                по работе с керамическими реставрациями. Это был самый
-                                насыщеный практический семинар из всех, что были за всю
-                                мою врачебную практику!
-                            </p>
-                            <div class="feedback__video">
-                                <video src="../images/video.mp4"></video>
-                            </div>
+                                    <div class="feedback__video">
+                                        <video id="video-frame" controls controlsList="nodownload"
+                                            src="../images/video.mp4" width="678" height="381"
+                                            allowfullscreen="allowfullscreen" poster="../images/cover-single.png">
+                                        </video>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-
-
                     </div>
                 </div>
             </section>
@@ -516,7 +527,10 @@
                             </div>
                         </div>
                         <div class="faq__video-block">
-                            <video src="../images/video.mp4"></video>
+                            <video id="video-frame" controls controlsList="nodownload" src="../images/video.mp4"
+                                width="678" height="381" allowfullscreen="allowfullscreen"
+                                poster="../images/poster.png">
+                            </video>
                         </div>
                         <div class="faq__buttons">
                             <a href="" class="faq__btn-blue button">Book your course <span></span></a>
@@ -527,7 +541,7 @@
             </section>
 
         </main>
-        <footer class="footer">
+        <footer class="footer grey">
             <div class="footer__container bg-cover">
                 <div class="footer__inner">
                     <div class="footer__info">
@@ -588,7 +602,7 @@
                             </p>
                         </div>
                         <div class="footer__logoImg">
-                            <img src="../images/logo.svg" alt="logo" />
+                            <img src="../images/logo.png" alt="logo" />
                         </div>
                     </div>
 
@@ -626,8 +640,8 @@
             </div>
         </footer>
     </div>
-    <script src="../js/jquery.js"></script>
-    <script src="../js/slick.min.js"></script>
+    <script src="../js/splide.min.js"></script>
+    <script src="../js/splide-extension-grid.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
 

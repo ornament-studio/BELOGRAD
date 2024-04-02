@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
- <!---------- Шаблон сторінки Контакти   ---------->
+<!---------- Шаблон сторінки Контакти   ---------->
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Belograd Agency</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/slick-theme.css">
-    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/splide.min.css">
 </head>
 
 <body>
@@ -34,7 +33,7 @@
                             </li>
                         </ul>
                     </div>
-                    <img src="../images/logo.svg" alt="logo" />
+                    <img class="header__logo" src="../images/logo.png" alt="logo" />
                     <div class="nav-menu">
                         <ul class="menu-list">
                             <li class="menu-item">
@@ -47,6 +46,7 @@
                     </div>
                 </div>
                 <div class="header__burgerIcon">
+                    <span class="word">Menu</span>
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
@@ -119,9 +119,9 @@
                                 <input type="hidden" name="_wpcf7_posted_data_hash" value="">
                             </div>
                             <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                autocomplete="name" aria-required="true" aria-invalid="false"
-                                placeholder="Your name" value="" type="text" name="your-name">
-                                <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                autocomplete="name" aria-required="true" aria-invalid="false" placeholder="Your name"
+                                value="" type="text" name="your-name">
+                            <input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                 autocomplete="name" aria-required="true" aria-invalid="false"
                                 placeholder="E-mail or telephone" value="" type="text" name="contact">
                             <textarea cols="40" rows="3" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"
@@ -132,7 +132,7 @@
                         </form>
                         <h2 class="contacts__subtitle">Or use these contacts:</h2>
                         <a class="contacts__mail"
-                            href="mailto:sales.belograd@gmail.com">mailto:sales.belograd@gmail.com</a>
+                            href="mailto:sales.belograd@gmail.com">sales.belograd@gmail.com</a>
                         <a class="contacts__tel" href="tel:+380564656456">WhatsApp / Viber / Telegram +380988787798</a>
                     </div>
                 </div>
@@ -201,7 +201,7 @@
                             </p>
                         </div>
                         <div class="footer__logoImg">
-                            <img src="../images/logo.svg" alt="logo" />
+                            <img src="../images/logo.png" alt="logo" />
                         </div>
                     </div>
 
@@ -240,8 +240,8 @@
         </footer>
         <!---------- footer end ---------->
     </div>
-    <script src="../js/jquery.js"></script>
-    <script src="../js/slick.min.js"></script>
+    <script src="../js/splide.min.js"></script>
+    <script src="../js/splide-extension-grid.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
 

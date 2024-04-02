@@ -1,207 +1,3 @@
-// sliders
-
-$(function () {
-  $(".programs__slider").slick({
-    infinite: true,
-    variableWidth: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-
-    responsive: [
-      {
-        breakpoint: 1440,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 481,
-        settings: "unslick",
-      },
-    ],
-  });
-
-  $(".program__slider").slick({
-    infinite: true,
-    variableWidth: true,
-    slidesToShow: 3,
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: "unslick",
-      },
-    ],
-  });
-
-  $(".gallery__slider").slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerMode: true,
-    variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
-
-  $(".benefits__slider").slick({
-    infinite: true,
-    variableWidth: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
-});
-
-$(function () {
-  $(".handsOn__slider").slick({
-    infinite: true,
-    variableWidth: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-
-    responsive: [
-      {
-        breakpoint: 901,
-        settings: "unslick",
-      },
-    ],
-  });
-});
-
-$(function () {
-  $(".feedback__slider").slick({
-    infinite: true,
-    variableWidth: true,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 780,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
-});
-
-$(function () {
-  $(".onlineCourses__slider").slick({
-    infinite: true,
-    variableWidth: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
-});
-
-$(function () {
-  $(".cases__slider").slick({
-    infinite: true,
-    variableWidth: true,
-    speed: 1000,
-    easing: "ease",
-    slidesToShow: 3,
-    slidesToScroll: 1,
-
-    responsive: [
-      {
-        breakpoint: 769,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
-});
-
-// smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
-
 // open mobile menu
 let menuBtn = document.querySelector(".header__burgerIcon");
 let menu = document.querySelector(".header__mobileNav");
@@ -246,35 +42,183 @@ function toggleItem() {
 
 // show filter list
 
-let filterBtn = document.querySelector(".filter__show");
-let filter = document.querySelector(".filter");
+const filterBtn = document.querySelector(".filter__show");
+const filter = document.querySelector(".filter");
 
-filterBtn.addEventListener("click", function () {
-  filter.classList.toggle("open");
-});
+if (filterBtn !== null) {
+  filterBtn.addEventListener("click", function () {
+    filter.classList.toggle("open");
+  });
+}
 
 //close filter
 const selectList = document.querySelectorAll(".filter__list");
-document.addEventListener("DOMContentLoaded", () => {
-  // Структура страницы загружена и готова к взаимодействию
-  window.addEventListener("click", (e) => {
-    // при клике в любом месте окна браузера
-    const target = e.target; // находим элемент, на котором был клик
-    if (!target.closest(".filter__show") && !target.closest(".filter")) {
-      // если этот элемент или его родительские элементы не окно навигации и не кнопка
-      filter.classList.remove("open");
-    }
+
+if (selectList !== null || filter !== null) {
+  document.addEventListener("DOMContentLoaded", () => {
+    // Структура страницы загружена и готова к взаимодействию
+    window.addEventListener("click", (e) => {
+      // при клике в любом месте окна браузера
+      const target = e.target; // находим элемент, на котором был клик
+      if (!target.closest(".filter__show") && !target.closest(".filter")) {
+        // если этот элемент или его родительские элементы не окно навигации и не кнопка
+        filter.classList.remove("open");
+      }
+    });
   });
-});
+}
 
 // video block
 let video = document.getElementById("video-frame");
-video.controls = false;
-video.addEventListener("click", function () {
-  if (video.paused) {
-    video.play();
-  } else {
-    video.pause();
+
+if (video !== null) {
+  video.controls = false;
+  video.addEventListener("click", function () {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+    video.controls = true;
+  });
+}
+
+// sliders
+var sliders = document.getElementsByClassName("general-splide");
+
+if (sliders.length > 0) {
+  for (var i = 0; i < sliders.length; i++) {
+    new Splide(sliders[i], {
+      perMove: 1,
+      perPage: 3,
+      gap: "15px",
+      type: "loop",
+      pagination: false,
+      autoWidth: true,
+      breakpoints: {
+        1200: {
+          perPage: 2,
+        },
+      },
+      breakpoints: {
+        770: {
+          perPage: 1,
+        },
+      },
+      breakpoints: {
+        480: {
+          gap: "10px",
+        },
+      },
+    }).mount();
   }
-  video.controls = true;
-});
+}
+
+if (document.querySelector(".feedback__slider")) {
+  new Splide(".feedback__slider", {
+    perMove: 1,
+    perPage: 2,
+    gap: "15px",
+    pagination: false,
+    autoWidth: true,
+    breakpoints: {
+      770: {
+        perPage: 1,
+        gap: "10px",
+      },
+    },
+  }).mount();
+}
+
+if (document.querySelector(".program__list")) {
+  new Splide(".program__list", {
+    perMove: 1,
+    perPage: 3,
+    gap: "15px",
+    type: "loop",
+    pagination: false,
+    autoWidth: true,
+    breakpoints: {
+      1200: {
+        perPage: 2,
+      },
+    },
+    breakpoints: {
+      770: {
+        perPage: 1,
+      },
+    },
+    breakpoints: {
+      480: {
+        destroy: true,
+        arrows: false,
+      },
+    },
+  }).mount();
+}
+
+if (document.querySelector(".gallery__slider")) {
+  new Splide(".gallery__slider", {
+    perMove: 1,
+    type: "loop",
+    perPage: 3,
+    pagination: false,
+    focus: "center",
+    breakpoints: {
+      480: {
+        perPage: 1,
+      },
+    },
+  }).mount();
+}
+
+if (document.querySelector(".sidebar__slider")) {
+  new Splide(".sidebar__slider", {
+    perMove: 1,
+    perPage: 1,
+    gap: '10px',
+    pagination: false,
+    mediaQuery: "min",
+    breakpoints: {
+      480: {
+        perPage: 2,
+        arrows: false,
+      },
+      770: {
+        destroy: true,
+      },
+    },
+  }).mount();
+}
+
+if (document.querySelector(".handsOn__slider")) {
+  new Splide(".handsOn__slider", {
+    perMove: 1,
+    perPage: 1,
+    pagination: false,
+    autoWidth: true,
+    breakpoints: {
+      480: {
+        destroy: true,
+        arrows: false,
+      },
+    },
+  }).mount();
+}
+
+// hover effect for mobile
+let elementsForHover = document.querySelectorAll('.hoverForMobile');
+
+if (elements.length > 0) { 
+  elements.forEach((element) => {
+    // Add touchstart event listener
+    element.addEventListener('touchstart', () => {
+      element.classList.add('touch-hover-effect');
+    });
+  
+    element.addEventListener('touchend', () => {
+      // Remove touch effect
+      element.classList.remove('touch-hover-effect');
+    });
+  });
+}

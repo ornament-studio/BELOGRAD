@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
- <!---------- Шаблон сторінки  Розкладу курсів  ---------->
+<!---------- Шаблон сторінки  Розкладу курсів  ---------->
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Belograd Agency</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/slick-theme.css">
-    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/splide.min.css">
 </head>
 
 <body>
@@ -21,39 +20,33 @@
                     <div class="nav-menu">
                         <ul class="menu-list">
                             <li class="menu-item">
-                                <a href="#handsOn-courses" class="menu-link">Hands-on courses</a>
+                                <a href="/html/hands-on.html" class="menu-link">Hands-on courses</a>
                             </li>
                             <li class="menu-item">
-                                <a href="" class="menu-link">One on one </a>
+                                <a href="/html/oneToOne.html" class="menu-link">One on one </a>
                             </li>
                             <li class="menu-item">
                                 <a href="#online-courses" class="menu-link">Online courses</a>
                             </li>
                             <li class="menu-item">
-                                <a href="" class="menu-link">Schedule</a>
+                                <a href="/html/schedule.html" class="menu-link">Schedule</a>
                             </li>
                         </ul>
                     </div>
-                    <img src="../images/logo.svg" alt="logo" />
+                    <img class="header__logo" src="../images/logo.png" alt="logo" />
                     <div class="nav-menu">
                         <ul class="menu-list">
                             <li class="menu-item">
-                                <a href="#cases-articles" class="menu-link">Cases and Articles</a>
+                                <a href="/html/category.html" class="menu-link">Cases and Articles</a>
                             </li>
                             <li class="menu-item">
-                                <a href="" class="menu-link">About us</a>
+                                <a href="/html/contact.html" class="menu-link">Сontacts</a>
                             </li>
-                            <li class="menu-item">
-                                <a href="#" class="menu-link">Сontacts</a>
-                            </li>
-                            <!-- <li class="menu-item">
-                                <a href="" class="menu-link language-switch">Language: Рос. English</a>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
-                <!-- <div class="header__mobileMenu"> -->
                 <div class="header__burgerIcon">
+                    <span class="word">Menu</span>
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
@@ -63,25 +56,22 @@
                     <div class="header__mobileWrapper">
                         <ul class="mobile__menu-list">
                             <li class="menu-item">
-                                <a href="#handsOn-courses" class="menu-link">Hands-on courses</a>
+                                <a href="/html/hands-on.html" class="menu-link">Hands-on courses</a>
                             </li>
                             <li class="menu-item">
-                                <a href="" class="menu-link">One on one </a>
+                                <a href="/html/oneToOne.html" class="menu-link">One on one </a>
                             </li>
                             <li class="menu-item">
                                 <a href="#online-courses" class="menu-link">Online courses</a>
                             </li>
                             <li class="menu-item">
-                                <a href="" class="menu-link">Schedule</a>
+                                <a href="/html/schedule.html" class="menu-link">Schedule</a>
                             </li>
                             <li class="menu-item">
-                                <a href="#cases-articles" class="menu-link">Cases and Articles</a>
+                                <a href="/html/category.html" class="menu-link">Cases and Articles</a>
                             </li>
                             <li class="menu-item">
-                                <a href="" class="menu-link">About us</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#" class="menu-link">Сontacts</a>
+                                <a href="/html/contact.html" class="menu-link">Сontacts</a>
                             </li>
                         </ul>
                         <div class="mobile__icons-list">
@@ -99,14 +89,8 @@
                                 <img src="../images/facebook.svg" alt="" />
                             </a>
                         </div>
-                        <!-- <ul class="language-switch menu-link">
-                                <li>Language:<a href=""> Рос.</a></li>
-                                <li><a href="">English</a></li>
-                            </ul> -->
                     </div>
-
                 </div>
-                <!-- </div> -->
             </div>
         </header>
         <!---------- header end ---------->
@@ -291,106 +275,115 @@
                     <a href="" class="courses__btn button mobile">Load more courses <span></span></a>
                 </div>
             </section>
+            <!---------- Section Feedback ---------->
             <section class="feedback" id="bl4">
                 <div class="feedback__container">
                     <h2 class="feedback__title">Feedbacks</h2>
-                    <div class="feedback__slider">
-                        <div class="feedback__item">
-                            <div class="feedback__user user">
-                                <div class="user__photo">
-                                    <img src="../images/user.svg" alt="user" />
-                                </div>
-                                <div class="user__name">
-                                    <h4>Elmer Baker</h4>
-                                    <p>
-                                        dentist from Ukraine, clinic owner
+                    <div class=" feedback__slider splide" role="group" aria-label="Splide Basic HTML Example">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class=" feedback__item splide__slide">
+                                    <div class="feedback__user user">
+                                        <div class="user__photo">
+                                            <img src="../images/user.svg" alt="user" />
+                                        </div>
+                                        <div class="user__name">
+                                            <h4>Elmer Baker</h4>
+                                            <p>
+                                                dentist from Ukraine, clinic owner
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="feedback__text">
+                                        Я прошел один из обучающих модулей на учебной вилле Макса
+                                        по работе с керамическими реставрациями. Это был самый
+                                        насыщеный практический семинар из всех, что были за всю
+                                        мою врачебную практику!
                                     </p>
-                                </div>
-                            </div>
-                            <p class="feedback__text">
-                                Я прошел один из обучающих модулей на учебной вилле Макса
-                                по работе с керамическими реставрациями. Это был самый
-                                насыщеный практический семинар из всех, что были за всю
-                                мою врачебную практику!
-                            </p>
-                            <blockquote>
-                                <p>Максим Белоград самый крутой и мотивирующий лектор мирового уровня!</p>
-                            </blockquote>
-                        </div>
-                        <div class="feedback__item">
-                            <div class="feedback__user user">
-                                <div class="user__photo">
-                                    <img src="../images/user.svg" alt="user" />
-                                </div>
-                                <div class="user__name">
-                                    <h4>Elmer Baker</h4>
-                                    <p>
-                                        dentist from Ukraine, clinic owner
+                                    <blockquote>
+                                        <span>“</span>
+                                        <p>Максим Белоград самый крутой и мотивирующий лектор мирового уровня!</p>
+                                    </blockquote>
+                                </li>
+                                <li class=" feedback__item splide__slide">
+                                    <div class="feedback__user user">
+                                        <div class="user__photo">
+                                            <img src="../images/user.svg" alt="user" />
+                                        </div>
+                                        <div class="user__name">
+                                            <h4>Elmer Baker</h4>
+                                            <p>
+                                                dentist from Ukraine, clinic owner
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="feedback__text">
+                                        Я прошел один из обучающих модулей на учебной вилле Макса
+                                        по работе с керамическими реставрациями. Это был самый
+                                        насыщеный практический семинар из всех, что были за всю
+                                        мою врачебную практику!
                                     </p>
-                                </div>
-                            </div>
-                            <p class="feedback__text">
-                                Я прошел один из обучающих модулей на учебной вилле Макса
-                                по работе с керамическими реставрациями. Это был самый
-                                насыщеный практический семинар из всех, что были за всю
-                                мою врачебную практику!
-                            </p>
-                            <blockquote>
-                                <span>“</span>
-                                <p>Максим Белоград самый крутой и мотивирующий лектор мирового уровня!</p>
-                            </blockquote>
-                        </div>
-
-                        <div class="feedback__item">
-                            <div class="feedback__user user">
-                                <div class="user__photo">
-                                    <img src="../images/user.svg" alt="user" />
-                                </div>
-                                <div class="user__name">
-                                    <h4 class="name">Elmer Baker</h4>
-                                    <p class="position">
-                                        dentist from Ukraine, clinic owner
+                                    <blockquote>
+                                        <span>“</span>
+                                        <p>Максим Белоград самый крутой и мотивирующий лектор мирового уровня!</p>
+                                    </blockquote>
+                                </li>
+                                <li class=" feedback__item splide__slide">
+                                    <div class="feedback__user user">
+                                        <div class="user__photo">
+                                            <img src="../images/user.svg" alt="user" />
+                                        </div>
+                                        <div class="user__name">
+                                            <h4 class="name">Elmer Baker</h4>
+                                            <p class="position">
+                                                dentist from Ukraine, clinic owner
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="feedback__text">
+                                        Я прошел один из обучающих модулей на учебной вилле Макса
+                                        по работе с керамическими реставрациями. Это был самый
+                                        насыщеный практический семинар из всех, что были за всю
+                                        мою врачебную практику!
                                     </p>
-                                </div>
-                            </div>
-                            <p class="feedback__text">
-                                Я прошел один из обучающих модулей на учебной вилле Макса
-                                по работе с керамическими реставрациями. Это был самый
-                                насыщеный практический семинар из всех, что были за всю
-                                мою врачебную практику!
-                            </p>
-                            <div class="feedback__video">
-                                <video src="../images/video.mp4"></video>
-                            </div>
-                        </div>
-
-                        <div class="feedback__item">
-                            <div class="feedback__user user">
-                                <div class="user__photo">
-                                    <img src="../images/user.svg" alt="user" />
-                                </div>
-                                <div class="user__name">
-                                    <h4 class="name">Elmer Baker</h4>
-                                    <p class="position">
-                                        dentist from Ukraine, clinic owner
+                                    <div class="feedback__video">
+                                        <video id="video-frame" controls controlsList="nodownload"
+                                            src="../images/video.mp4" width="678" height="381"
+                                            allowfullscreen="allowfullscreen" poster="../images/cover-single.png">
+                                        </video>
+                                    </div>
+                                </li>
+                                <li class="feedback__item splide__slide">
+                                    <div class="feedback__user user">
+                                        <div class="user__photo">
+                                            <img src="../images/user.svg" alt="user" />
+                                        </div>
+                                        <div class="user__name">
+                                            <h4 class="name">Elmer Baker</h4>
+                                            <p class="position">
+                                                dentist from Ukraine, clinic owner
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="feedback__text">
+                                        Я прошел один из обучающих модулей на учебной вилле Макса
+                                        по работе с керамическими реставрациями. Это был самый
+                                        насыщеный практический семинар из всех, что были за всю
+                                        мою врачебную практику!
                                     </p>
-                                </div>
-                            </div>
-                            <p class="feedback__text">
-                                Я прошел один из обучающих модулей на учебной вилле Макса
-                                по работе с керамическими реставрациями. Это был самый
-                                насыщеный практический семинар из всех, что были за всю
-                                мою врачебную практику!
-                            </p>
-                            <div class="feedback__video">
-                                <video src="../images/video.mp4"></video>
-                            </div>
+                                    <div class="feedback__video">
+                                        <video id="video-frame" controls controlsList="nodownload"
+                                            src="../images/video.mp4" width="678" height="381"
+                                            allowfullscreen="allowfullscreen" poster="../images/cover-single.png">
+                                        </video>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-          
-
                     </div>
                 </div>
             </section>
+
             <section class="faq" id="bl3">
                 <div class="faq__container">
                     <h2 class="faq__title">F.A.Q</h2>
@@ -464,7 +457,10 @@
                             </div>
                         </div>
                         <div class="faq__video-block">
-                            <video src="../images/video.mp4"></video>
+                            <video id="video-frame" controls controlsList="nodownload" src="../images/video.mp4"
+                                width="678" height="381" allowfullscreen="allowfullscreen"
+                                poster="../images/poster.png">
+                            </video>
                         </div>
                         <div class="faq__buttons">
                             <a href="" class="faq__btn-blue button">Book your course <span></span></a>
@@ -537,7 +533,7 @@
                             </p>
                         </div>
                         <div class="footer__logoImg">
-                            <img src="../images/logo.svg" alt="logo" />
+                            <img src="../images/logo.png" alt="logo" />
                         </div>
                     </div>
 
@@ -576,8 +572,8 @@
         </footer>
         <!---------- footer end ---------->
     </div>
-    <script src="../js/jquery.js"></script>
-    <script src="../js/slick.min.js"></script>
+    <script src="../js/splide.min.js"></script>
+    <script src="../js/splide-extension-grid.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
 

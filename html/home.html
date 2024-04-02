@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
- <!---------- Шаблон Домашньої сторінки  ---------->
+<!---------- Шаблон Домашньої сторінки  ---------->
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Belograd Agency</title>
+    <link rel="stylesheet" href="../css/splide.min.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/slick-theme.css">
-    <link rel="stylesheet" href="../css/slick.css">
 </head>
 
 <body>
@@ -35,7 +32,7 @@
                             </li>
                         </ul>
                     </div>
-                    <img src="../images/logo.svg" alt="logo" />
+                    <img class="header__logo" src="../images/logo.png" alt="logo" />
                     <div class="nav-menu">
                         <ul class="menu-list">
                             <li class="menu-item">
@@ -48,6 +45,7 @@
                     </div>
                 </div>
                 <div class="header__burgerIcon">
+                    <span class="word">Menu</span>
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
@@ -106,11 +104,11 @@
                         <div class="primary__titles">
                             <h1 class="primary__headline headline">Dental courses</h1>
                             <h2 class="primary__title title">
-                                We are hands-on! The whole <br />
+                                We are hands-on! The whole
                                 world <span>studies with us!</span>
                             </h2>
                             <p class="primary__text text">
-                                BELOGRAD | Academy the place where you become <br />
+                                BELOGRAD | Academy the place where you to become
                                 better. We provide best courses for dentists.
                             </p>
                         </div>
@@ -135,7 +133,7 @@
                             </div>
                             <span>Belograd academy</span>
                         </div>
-                        <div class="programs__slider">
+                        <div class="programs__items">
                             <div class="programs__item">
                                 <div class="programs__img">
                                     <img src="../images/programs-1.png" alt="" />
@@ -145,8 +143,8 @@
                                         Hands-on courses
                                     </h4>
                                     <p class="programs__text text">
-                                        The best way to learn - hands-on workshops. We offer BIG
-                                        courses on different topics. 100% practical.
+                                        The best way to learn is to attend hands-on workshops. We offer BIG courses on
+                                        different topics. 100% practical.
                                     </p>
 
                                     <a href="#" class="programs__btn button">Learn more <span></span></a>
@@ -205,7 +203,7 @@
 
                                 <div class="level__item">
                                     <h4 class="level__subtitle subtitle">
-                                        Doctors of different specializations
+                                        Dentists of different specializations
                                     </h4>
                                     <p class="level__text text">
                                         If you want to deepen your knowledge and skills in your
@@ -215,12 +213,12 @@
 
                                 <div class="level__item">
                                     <h4 class="level__subtitle subtitle">
-                                        Experienced doctors
+                                        Experienced dentists
                                     </h4>
                                     <p class="level__text text">
                                         Our programs will help strengthen, simplify and make your
                                         work more efficient. You will get a lot of practical
-                                        nuances and subtleties that will help you become even
+                                        nuances and subtleties that will help you to become even
                                         better.
                                     </p>
                                 </div>
@@ -231,8 +229,9 @@
                             </div>
                         </div>
                         <div class="level__video">
-                            <video id="video-frame" controls controlsList="nodownload" src="../images/video.mp4" width="678" height="381" allowfullscreen="allowfullscreen" 
-                                 poster="../images/preview.png">
+                            <video id="video-frame" controls controlsList="nodownload" src="../images/video.mp4"
+                                width="678" height="381" allowfullscreen="allowfullscreen"
+                                poster="../images/cover-single.png">
                             </video>
                         </div>
                     </div>
@@ -245,45 +244,49 @@
                         <h2 class="benefits__title title">
                             The unique benefits <br />of our training:
                         </h2>
-
-                        <div class="benefits__slider">
-                            <div class="benefits__slider-item">
-                                <div class="benefits__img">
-                                    <img src="../images/benefits-map.svg" alt="map" />
-                                </div>
-                                <h2 class="benefits__slider-title title">97+</h2>
-                                <p class="benefits__slider-text text">
-                                    countries were trained in our center
-                                </p>
-                            </div>
-                            <div class="benefits__slider-item">
-                                <div class="benefits__img">
-                                    <img src="../images/benefits-map.svg" alt="map" />
-                                </div>
-                                <h2 class="benefits__slider-title title">97+</h2>
-                                <p class="benefits__slider-text text">
-                                    countries were trained in our center
-                                </p>
-                            </div>
-                            <div class="benefits__slider-item">
-                                <div class="benefits__img">
-                                    <img src="../images/benefits-tools.svg" alt="tools" />
-                                </div>
-                                <h2 class="benefits__slider-title title">5000+</h2>
-                                <p class="benefits__slider-text text">
-                                    dentists from all over the world took part in practical
-                                    courses at our training base
-                                </p>
-                            </div>
-                            <div class="benefits__slider-item">
-                                <div class="benefits__img">
-                                    <img src="../images/benefits-smile.svg" alt="smile" />
-                                </div>
-                                <h2 class="benefits__slider-title title">50000+</h2>
-                                <p class="benefits__slider-text text">
-                                    colleagues from all over the world took part in online
-                                    master classes
-                                </p>
+                        <div class="benefits__slider general-splide splide" role="group"
+                            aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="benefits__slider-item splide__slide">
+                                        <div class="benefits__img">
+                                            <img src="../images/benefits-map.svg" alt="map" />
+                                        </div>
+                                        <h2 class="benefits__slider-title title">97+</h2>
+                                        <p class="benefits__slider-text text">
+                                            countries were trained in our center
+                                        </p>
+                                    </li>
+                                    <li class="benefits__slider-item splide__slide">
+                                        <div class="benefits__img">
+                                            <img src="../images/benefits-map.svg" alt="map" />
+                                        </div>
+                                        <h2 class="benefits__slider-title title">97+</h2>
+                                        <p class="benefits__slider-text text">
+                                            countries were trained in our center
+                                        </p>
+                                    </li>
+                                    <li class="benefits__slider-item splide__slide">
+                                        <div class="benefits__img">
+                                            <img src="../images/benefits-tools.svg" alt="tools" />
+                                        </div>
+                                        <h2 class="benefits__slider-title title">5000+</h2>
+                                        <p class="benefits__slider-text text">
+                                            dentists from all over the world took part in practical
+                                            courses at our training base
+                                        </p>
+                                    </li>
+                                    <li class="benefits__slider-item splide__slide">
+                                        <div class="benefits__img">
+                                            <img src="../images/benefits-smile.svg" alt="smile" />
+                                        </div>
+                                        <h2 class="benefits__slider-title title">50000+</h2>
+                                        <p class="benefits__slider-text text">
+                                            colleagues from all over the world took part in online
+                                            master classes
+                                        </p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -296,75 +299,82 @@
                         <h2 class="handsOn__title title">
                             Our <span>Hands-on</span> courses
                         </h2>
-                        <div class="handsOn__slider">
-                            <div class="handsOn__slider-item">
-                                <div class="handsOn__slider-img">
-                                    <img src="../images/hands-on.jpg" alt="cover" />
-                                </div>
-                                <div class="handsOn__slider-info">
-                                    <h2 class="handsOn__caption caption">
-                                        Implant Microsurgery. <br />
-                                        Basic intensive course
-                                    </h2>
-                                    <h4 class="handsOn__subtitle subtitle">
-                                        <span></span> Nearest date: April 12-14, 2024
-                                    </h4>
-                                    <p class="handsOn__text text">
-                                        Take your start in implant-microsurgery and surgery with a
-                                        magnification. 3 days hands-on course for good start in
-                                        implantology.
-                                    </p>
-                                    <div class="handsOn__btns">
-                                        <a href="#" class="handsOn__btn1 button">Learn more <span></span></a>
-                                        <a href="#" class="handsOn__btn2 button">See all courses <span></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="handsOn__slider-item">
-                                <div class="handsOn__slider-img">
-                                    <img src="../images/hands-on.jpg" alt="cover" />
-                                </div>
-                                <div class="handsOn__slider-info">
-                                    <h2 class="handsOn__caption caption">
-                                        Implant Microsurgery. <br />
-                                        Basic intensive course
-                                    </h2>
-                                    <h4 class="handsOn__subtitle subtitle">
-                                        <span></span> Nearest date: April 12-14, 2024
-                                    </h4>
-                                    <p class="handsOn__text text">
-                                        Take your start in implant-microsurgery and surgery with a
-                                        magnification. 3 days hands-on course for good start in
-                                        implantology.
-                                    </p>
-                                    <div class="handsOn__btns">
-                                        <a href="#" class="handsOn__btn1 button">Learn more <span></span></a>
-                                        <a href="#" class="handsOn__btn2 button">See all courses <span></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="handsOn__slider-item">
-                                <div class="handsOn__slider-img">
-                                    <img src="../images/hands-on.jpg" alt="cover" />
-                                </div>
-                                <div class="handsOn__slider-info">
-                                    <h2 class="handsOn__caption caption">
-                                        Implant Microsurgery. <br />
-                                        Basic intensive course
-                                    </h2>
-                                    <h4 class="handsOn__subtitle subtitle">
-                                        <span></span> Nearest date: April 12-14, 2024
-                                    </h4>
-                                    <p class="handsOn__text text">
-                                        Take your start in implant-microsurgery and surgery with a
-                                        magnification. 3 days hands-on course for good start in
-                                        implantology.
-                                    </p>
-                                    <div class="handsOn__btns">
-                                        <a href="#" class="handsOn__btn1 button">Learn more <span></span></a>
-                                        <a href="#" class="handsOn__btn2 button">See all courses <span></span></a>
-                                    </div>
-                                </div>
+                        <div class="handsOn__slider splide" role="group" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="handsOn__slider-item splide__slide">
+                                        <div class="handsOn__slider-img">
+                                            <img src="../images/hands-on.jpg" alt="cover" />
+                                        </div>
+                                        <div class="handsOn__slider-info">
+                                            <h2 class="handsOn__caption caption">
+                                                Implant Microsurgery. <br />
+                                                Basic intensive course
+                                            </h2>
+                                            <h4 class="handsOn__subtitle subtitle">
+                                                <span></span> Nearest date: April 12-14, 2024
+                                            </h4>
+                                            <p class="handsOn__text text">
+                                                Take your start in implant-microsurgery and surgery with a
+                                                magnification. 3 days hands-on course for good start in
+                                                implantology.
+                                            </p>
+                                            <div class="handsOn__btns">
+                                                <a href="#" class="handsOn__btn1 button">Learn more <span></span></a>
+                                                <a href="#" class="handsOn__btn2 button">See all courses
+                                                    <span></span></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="handsOn__slider-item splide__slide">
+                                        <div class="handsOn__slider-img">
+                                            <img src="../images/hands-on.jpg" alt="cover" />
+                                        </div>
+                                        <div class="handsOn__slider-info">
+                                            <h2 class="handsOn__caption caption">
+                                                Implant Microsurgery. <br />
+                                                Basic intensive course
+                                            </h2>
+                                            <h4 class="handsOn__subtitle subtitle">
+                                                <span></span> Nearest date: April 12-14, 2024
+                                            </h4>
+                                            <p class="handsOn__text text">
+                                                Take your start in implant-microsurgery and surgery with a
+                                                magnification. 3 days hands-on course for good start in
+                                                implantology.
+                                            </p>
+                                            <div class="handsOn__btns">
+                                                <a href="#" class="handsOn__btn1 button">Learn more <span></span></a>
+                                                <a href="#" class="handsOn__btn2 button">See all courses
+                                                    <span></span></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="handsOn__slider-item splide__slide">
+                                        <div class="handsOn__slider-img">
+                                            <img src="../images/hands-on.jpg" alt="cover" />
+                                        </div>
+                                        <div class="handsOn__slider-info">
+                                            <h2 class="handsOn__caption caption">
+                                                Implant Microsurgery. <br />
+                                                Basic intensive course
+                                            </h2>
+                                            <h4 class="handsOn__subtitle subtitle">
+                                                <span></span> Nearest date: April 12-14, 2024
+                                            </h4>
+                                            <p class="handsOn__text text">
+                                                Take your start in implant-microsurgery and surgery with a
+                                                magnification. 3 days hands-on course for good start in
+                                                implantology.
+                                            </p>
+                                            <div class="handsOn__btns">
+                                                <a href="#" class="handsOn__btn1 button">Learn more <span></span></a>
+                                                <a href="#" class="handsOn__btn2 button">See all courses
+                                                    <span></span></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -374,100 +384,107 @@
             <section class="feedback" id="bl4">
                 <div class="feedback__container">
                     <h2 class="feedback__title">Feedbacks</h2>
-                    <div class="feedback__slider">
-                        <div class="feedback__item">
-                            <div class="feedback__user user">
-                                <div class="user__photo">
-                                    <img src="../images/user.svg" alt="user" />
-                                </div>
-                                <div class="user__name">
-                                    <h4>Elmer Baker</h4>
-                                    <p>
-                                        dentist from Ukraine, clinic owner
+                    <div class=" feedback__slider splide" role="group" aria-label="Splide Basic HTML Example">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class=" feedback__item splide__slide">
+                                    <div class="feedback__user user">
+                                        <div class="user__photo">
+                                            <img src="../images/user.svg" alt="user" />
+                                        </div>
+                                        <div class="user__name">
+                                            <h4>Elmer Baker</h4>
+                                            <p>
+                                                dentist from Ukraine, clinic owner
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="feedback__text">
+                                        Я прошел один из обучающих модулей на учебной вилле Макса
+                                        по работе с керамическими реставрациями. Это был самый
+                                        насыщеный практический семинар из всех, что были за всю
+                                        мою врачебную практику!
                                     </p>
-                                </div>
-                            </div>
-                            <p class="feedback__text">
-                                Я прошел один из обучающих модулей на учебной вилле Макса
-                                по работе с керамическими реставрациями. Это был самый
-                                насыщеный практический семинар из всех, что были за всю
-                                мою врачебную практику!
-                            </p>
-                            <blockquote>
-                                <p>Максим Белоград самый крутой и мотивирующий лектор мирового уровня!</p>
-                            </blockquote>
-                        </div>
-                        <div class="feedback__item">
-                            <div class="feedback__user user">
-                                <div class="user__photo">
-                                    <img src="../images/user.svg" alt="user" />
-                                </div>
-                                <div class="user__name">
-                                    <h4>Elmer Baker</h4>
-                                    <p>
-                                        dentist from Ukraine, clinic owner
+                                    <blockquote>
+                                        <span>“</span>
+                                        <p>Максим Белоград самый крутой и мотивирующий лектор мирового уровня!</p>
+                                    </blockquote>
+                                </li>
+                                <li class=" feedback__item splide__slide">
+                                    <div class="feedback__user user">
+                                        <div class="user__photo">
+                                            <img src="../images/user.svg" alt="user" />
+                                        </div>
+                                        <div class="user__name">
+                                            <h4>Elmer Baker</h4>
+                                            <p>
+                                                dentist from Ukraine, clinic owner
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="feedback__text">
+                                        Я прошел один из обучающих модулей на учебной вилле Макса
+                                        по работе с керамическими реставрациями. Это был самый
+                                        насыщеный практический семинар из всех, что были за всю
+                                        мою врачебную практику!
                                     </p>
-                                </div>
-                            </div>
-                            <p class="feedback__text">
-                                Я прошел один из обучающих модулей на учебной вилле Макса
-                                по работе с керамическими реставрациями. Это был самый
-                                насыщеный практический семинар из всех, что были за всю
-                                мою врачебную практику!
-                            </p>
-                            <blockquote>
-                                <span>“</span>
-                                <p>Максим Белоград самый крутой и мотивирующий лектор мирового уровня!</p>
-                            </blockquote>
-                        </div>
-
-                        <div class="feedback__item">
-                            <div class="feedback__user user">
-                                <div class="user__photo">
-                                    <img src="../images/user.svg" alt="user" />
-                                </div>
-                                <div class="user__name">
-                                    <h4 class="name">Elmer Baker</h4>
-                                    <p class="position">
-                                        dentist from Ukraine, clinic owner
+                                    <blockquote>
+                                        <span>“</span>
+                                        <p>Максим Белоград самый крутой и мотивирующий лектор мирового уровня!</p>
+                                    </blockquote>
+                                </li>
+                                <li class=" feedback__item splide__slide">
+                                    <div class="feedback__user user">
+                                        <div class="user__photo">
+                                            <img src="../images/user.svg" alt="user" />
+                                        </div>
+                                        <div class="user__name">
+                                            <h4 class="name">Elmer Baker</h4>
+                                            <p class="position">
+                                                dentist from Ukraine, clinic owner
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="feedback__text">
+                                        Я прошел один из обучающих модулей на учебной вилле Макса
+                                        по работе с керамическими реставрациями. Это был самый
+                                        насыщеный практический семинар из всех, что были за всю
+                                        мою врачебную практику!
                                     </p>
-                                </div>
-                            </div>
-                            <p class="feedback__text">
-                                Я прошел один из обучающих модулей на учебной вилле Макса
-                                по работе с керамическими реставрациями. Это был самый
-                                насыщеный практический семинар из всех, что были за всю
-                                мою врачебную практику!
-                            </p>
-                            <div class="feedback__video">
-                                <video src="../images/video.mp4"></video>
-                            </div>
-                        </div>
-
-                        <div class="feedback__item">
-                            <div class="feedback__user user">
-                                <div class="user__photo">
-                                    <img src="../images/user.svg" alt="user" />
-                                </div>
-                                <div class="user__name">
-                                    <h4 class="name">Elmer Baker</h4>
-                                    <p class="position">
-                                        dentist from Ukraine, clinic owner
+                                    <div class="feedback__video">
+                                        <video id="video-frame" controls controlsList="nodownload"
+                                            src="../images/video.mp4" width="678" height="381"
+                                            allowfullscreen="allowfullscreen" poster="../images/cover-single.png">
+                                        </video>
+                                    </div>
+                                </li>
+                                <li class="feedback__item splide__slide">
+                                    <div class="feedback__user user">
+                                        <div class="user__photo">
+                                            <img src="../images/user.svg" alt="user" />
+                                        </div>
+                                        <div class="user__name">
+                                            <h4 class="name">Elmer Baker</h4>
+                                            <p class="position">
+                                                dentist from Ukraine, clinic owner
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="feedback__text">
+                                        Я прошел один из обучающих модулей на учебной вилле Макса
+                                        по работе с керамическими реставрациями. Это был самый
+                                        насыщеный практический семинар из всех, что были за всю
+                                        мою врачебную практику!
                                     </p>
-                                </div>
-                            </div>
-                            <p class="feedback__text">
-                                Я прошел один из обучающих модулей на учебной вилле Макса
-                                по работе с керамическими реставрациями. Это был самый
-                                насыщеный практический семинар из всех, что были за всю
-                                мою врачебную практику!
-                            </p>
-                            <div class="feedback__video">
-                                <video src="../images/video.mp4"></video>
-                            </div>
+                                    <div class="feedback__video">
+                                        <video id="video-frame" controls controlsList="nodownload"
+                                            src="../images/video.mp4" width="678" height="381"
+                                            allowfullscreen="allowfullscreen" poster="../images/cover-single.png">
+                                        </video>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-          
-
                     </div>
                 </div>
             </section>
@@ -476,105 +493,104 @@
                 <div class="onlineCourses__container">
                     <div class="onlineCourses__inner">
                         <h2 class="onlineCourses__title title">Our online courses</h2>
-
-                        <div class="onlineCourses__slider">
-                            <div class="onlineCourses__item">
-                                <div class="onlineCourses__img">
-                                    <img src="../images/online1.png" alt="cover" />
-                                </div>
-                                <div class="onlineCourses__about">
-                                    <h2 class="onlineCourses__caption caption">
-                                        Complete guide in veneer preps
-                                    </h2>
-                                    <p class="onlineCourses__text text">
-                                        This online workshop will give you complete guide in
-                                        veneer prep designs. All preparation varieties will be
-                                        shown in precise details as well as indications to each
-                                        type will be...
-                                    </p>
-                                    <p class="onlineCourses__prise text">
-                                        <span></span> Price: 119 Eur
-                                    </p>
-                                    <a href="#" class="onlineCourses__btn button">
-                                        Learn more <span></span>
-                                    </a>
-                                    <a href="#" class="onlineCourses__bottom-btn button">
-                                        See all <span></span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="onlineCourses__item">
-                                <div class="onlineCourses__img">
-                                    <img src="../images/online2.png" alt="cover" />
-                                </div>
-                                <div class="onlineCourses__about">
-                                    <h2 class="onlineCourses__caption caption">
-                                        Bonding: Zirconia crowns and Ceramic over-lays
-                                    </h2>
-                                    <p class="onlineCourses__text text">
-                                        <span>Webinar. Theory and demonstration.</span> <br />
-                                        This online workshop will guide you in bonding protocols
-                                        of indirect restorations made of...
-                                    </p>
-                                    <p class="onlineCourses__prise text">
-                                        <span></span> Price: 119 Eur
-                                    </p>
-                                    <a href="#" class="onlineCourses__btn button">Learn more <span></span></a>
-                                    <a href="#" class="onlineCourses__bottom-btn button">
-                                        See all <span></span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="onlineCourses__item">
-                                <div class="onlineCourses__img">
-                                    <img src="../images/online3.png" alt="cover" />
-                                </div>
-                                <div class="onlineCourses__about">
-                                    <h2 class="onlineCourses__caption caption">
-                                        BRUBBERDAMology: basics, tips and tricks with isolation
-                                    </h2>
-                                    <p class="onlineCourses__text text">
-                                        <span>With isolation</span> <br />
-                                        This time we present you webinar with online master-class
-                                        elements dedicated...
-                                    </p>
-                                    <p class="onlineCourses__prise text">
-                                        <span></span> Price: 79 Eur
-                                    </p>
-                                    <a href="#" class="onlineCourses__btn button">Learn more <span></span></a>
-                                    <a href="#" class="onlineCourses__bottom-btn button">
-                                        See all <span></span>
-                                    </a>
-                                </div>
-
-                            </div>
-
-                            <div class="onlineCourses__item">
-                                <div class="onlineCourses__img">
-                                    <img src="../images/online2.png" alt="cover" />
-                                </div>
-                                <div class="onlineCourses__about">
-                                    <h2 class="onlineCourses__caption caption">
-                                        Bonding: Zirconia crowns and Ceramic over-lays
-                                    </h2>
-                                    <p class="onlineCourses__text text">
-                                        <span>Webinar. Theory and demonstration.</span> <br />
-                                        This online workshop will guide you in bonding protocols
-                                        of indirect restorations made of...
-                                    </p>
-                                    <p class="onlineCourses__prise text">
-                                        <span></span> Price: 119 Eur
-                                    </p>
-                                    <a href="#" class="onlineCourses__btn button">Learn more <span></span></a>
-                                    <a href="#" class="onlineCourses__bottom-btn button">
-                                        See all <span></span>
-                                    </a>
-                                </div>
+                        <div class="onlineCourses__slider general-splide splide" role="group"
+                            aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="onlineCourses__item splide__slide">
+                                        <div class="onlineCourses__img">
+                                            <img src="../images/online1.png" alt="cover" />
+                                        </div>
+                                        <div class="onlineCourses__about">
+                                            <h2 class="onlineCourses__caption caption">
+                                                Complete guide in veneer preps
+                                            </h2>
+                                            <p class="onlineCourses__text text">
+                                                This online workshop will give you complete guide in
+                                                veneer prep designs. All preparation varieties will be
+                                                shown in precise details as well as indications to each
+                                                type will be...
+                                            </p>
+                                            <p class="onlineCourses__prise text">
+                                                <span></span> Price: 119 Eur
+                                            </p>
+                                            <a href="#" class="onlineCourses__btn button">
+                                                Learn more <span></span>
+                                            </a>
+                                            <a href="#" class="onlineCourses__bottom-btn button">
+                                                See all <span></span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="onlineCourses__item splide__slide">
+                                        <div class="onlineCourses__img">
+                                            <img src="../images/online2.png" alt="cover" />
+                                        </div>
+                                        <div class="onlineCourses__about">
+                                            <h2 class="onlineCourses__caption caption">
+                                                Bonding: Zirconia crowns and Ceramic over-lays
+                                            </h2>
+                                            <p class="onlineCourses__text text">
+                                                <span>Webinar. Theory and demonstration.</span> <br />
+                                                This online workshop will guide you in bonding protocols
+                                                of indirect restorations made of...
+                                            </p>
+                                            <p class="onlineCourses__prise text">
+                                                <span></span> Price: 119 Eur
+                                            </p>
+                                            <a href="#" class="onlineCourses__btn button">Learn more <span></span></a>
+                                            <a href="#" class="onlineCourses__bottom-btn button">
+                                                See all <span></span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="onlineCourses__item splide__slide">
+                                        <div class="onlineCourses__img">
+                                            <img src="../images/online3.png" alt="cover" />
+                                        </div>
+                                        <div class="onlineCourses__about">
+                                            <h2 class="onlineCourses__caption caption">
+                                                BRUBBERDAMology: basics, tips and tricks with isolation
+                                            </h2>
+                                            <p class="onlineCourses__text text">
+                                                <span>With isolation</span> <br />
+                                                This time we present you webinar with online master-class
+                                                elements dedicated...
+                                            </p>
+                                            <p class="onlineCourses__prise text">
+                                                <span></span> Price: 79 Eur
+                                            </p>
+                                            <a href="#" class="onlineCourses__btn button">Learn more <span></span></a>
+                                            <a href="#" class="onlineCourses__bottom-btn button">
+                                                See all <span></span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="onlineCourses__item splide__slide">
+                                        <div class="onlineCourses__img">
+                                            <img src="../images/online2.png" alt="cover" />
+                                        </div>
+                                        <div class="onlineCourses__about">
+                                            <h2 class="onlineCourses__caption caption">
+                                                Bonding: Zirconia crowns and Ceramic over-lays
+                                            </h2>
+                                            <p class="onlineCourses__text text">
+                                                <span>Webinar. Theory and demonstration.</span> <br />
+                                                This online workshop will guide you in bonding protocols
+                                                of indirect restorations made of...
+                                            </p>
+                                            <p class="onlineCourses__prise text">
+                                                <span></span> Price: 119 Eur
+                                            </p>
+                                            <a href="#" class="onlineCourses__btn button">Learn more <span></span></a>
+                                            <a href="#" class="onlineCourses__bottom-btn button">
+                                                See all <span></span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-
                         <a href="#" class="onlineCourses__bottom-btn button">
                             See all <span></span>
                         </a>
@@ -585,99 +601,104 @@
             <section class="cases" id="cases-articles">
                 <img class="cases__mobile_bg" src="../images/case-bg.jpg" alt="background">
                 <div class="cases__container bg-cover">
-                    <div class="cases__inner"> 
+                    <div class="cases__inner">
                         <img class="cases__background" src="../images/footer-bg.png" alt="background">
                         <h2 class="cases__title title">Cases and articles</h2>
                         <p class="cases__text text">
                             We invite you to explore our free articles and videos that will
                             help you delve into various topics.
                         </p>
-                        <div class="cases__slider">
-                            <div class="cases__item">
-                                <div class="cases__img">
-                                    <img src="../images/cases1.png" alt="cover" />
-                                </div>
-                                <div class="cases__about">
-                                    <h2 class="cases__caption caption">
-                                        TOP free educational materials
-                                    </h2>
-                                    <p class="cases__text text">
-                                        From Dentists to Dentists. In terms of our initiative to
-                                        support colleagues during quarantine we collected for you
-                                        useful...
-                                    </p>
-                                    <p class="cases__date text"><span></span> 18.11.2019</p>
-                                    <a href="#" class="cases__btns button">
-                                        Read <span></span>
-                                    </a>
-                                    <a href="#" class="cases__bottom-btn button">
-                                        See all <span></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="cases__item">
-                                <div class="cases__img">
-                                    <img src="../images/cases2.png" alt="cover" />
-                                </div>
-                                <div class="cases__about">
-                                    <h2 class="cases__caption caption">
-                                        Double loop technique
-                                    </h2>
-                                    <p class="cases__text text">
-                                        Double loop technique is considered to be one of the most
-                                        efficient methods to isolate cervical zones...
-                                    </p>
-                                    <p class="cases__date text"><span></span> 18.11.2019</p>
-                                    <a href="#" class="cases__btns button">
-                                        Read <span></span>
-                                    </a>
-                                    <a href="#" class="cases__bottom-btn button">
-                                        See all <span></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="cases__item">
-                                <div class="cases__img">
-                                    <img src="../images/cases3.png" alt="cover" />
-                                </div>
-                                <div class="cases__about">
-                                    <h2 class="cases__caption caption">
-                                        Some preps and isolation
-                                    </h2>
-                                    <p class="cases__text text">
-                                        We will help you to master rubberdam isolation during
-                                        Module 2 and preps during Module 1 hands-on courses...
-                                    </p>
-                                    <p class="cases__date text"><span></span> 18.11.2019</p>
-                                    <a href="#" class="cases__btns button">
-                                        Read<span></span>
-                                    </a>
-                                    <a href="#" class="cases__bottom-btn button">
-                                        See all <span></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="cases__item">
-                                <div class="cases__img">
-                                    <img src="../images/cases1.png" alt="cover" />
-                                </div>
-                                <div class="cases__about">
-                                    <h2 class="cases__caption caption">
-                                        TOP free educational materials
-                                    </h2>
-                                    <p class="cases__text text">
-                                        From Dentists to Dentists. In terms of our initiative to
-                                        support colleagues during quarantine we collected for you
-                                        useful...
-                                    </p>
-                                    <p class="cases__date text"><span></span> 18.11.2019</p>
-                                    <a href="#" class="cases__btns button">
-                                        Read <span></span>
-                                    </a>
-                                    <a href="#" class="cases__bottom-btn button">
-                                        See all <span></span>
-                                    </a>
-                                </div>
+                        <div class=" cases__slider general-splide splide" role="group"
+                            aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="cases__item splide__slide">
+                                        <div class="cases__img">
+                                            <img src="../images/cases1.png" alt="cover" />
+                                        </div>
+                                        <div class="cases__about">
+                                            <h2 class="cases__caption caption">
+                                                TOP free educational materials
+                                            </h2>
+                                            <p class="cases__text text">
+                                                From Dentists to Dentists. In terms of our initiative to
+                                                support colleagues during quarantine we collected for you
+                                                useful...
+                                            </p>
+                                            <p class="cases__date text"><span></span> 18.11.2019</p>
+                                            <a href="#" class="cases__btns button">
+                                                Read <span></span>
+                                            </a>
+                                            <a href="#" class="cases__bottom-btn button">
+                                                See all <span></span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="cases__item splide__slide">
+                                        <div class="cases__img">
+                                            <img src="../images/cases2.png" alt="cover" />
+                                        </div>
+                                        <div class="cases__about">
+                                            <h2 class="cases__caption caption">
+                                                Double loop technique
+                                            </h2>
+                                            <p class="cases__text text">
+                                                Double loop technique is considered to be one of the most
+                                                efficient methods to isolate cervical zones...
+                                            </p>
+                                            <p class="cases__date text"><span></span> 18.11.2019</p>
+                                            <a href="#" class="cases__btns button">
+                                                Read <span></span>
+                                            </a>
+                                            <a href="#" class="cases__bottom-btn button">
+                                                See all <span></span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="cases__item splide__slide">
+                                        <div class="cases__img">
+                                            <img src="../images/cases3.png" alt="cover" />
+                                        </div>
+                                        <div class="cases__about">
+                                            <h2 class="cases__caption caption">
+                                                Some preps and isolation
+                                            </h2>
+                                            <p class="cases__text text">
+                                                We will help you to master rubberdam isolation during
+                                                Module 2 and preps during Module 1 hands-on courses...
+                                            </p>
+                                            <p class="cases__date text"><span></span> 18.11.2019</p>
+                                            <a href="#" class="cases__btns button">
+                                                Read<span></span>
+                                            </a>
+                                            <a href="#" class="cases__bottom-btn button">
+                                                See all <span></span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="cases__item splide__slide">
+                                        <div class="cases__img">
+                                            <img src="../images/cases1.png" alt="cover" />
+                                        </div>
+                                        <div class="cases__about">
+                                            <h2 class="cases__caption caption">
+                                                TOP free educational materials
+                                            </h2>
+                                            <p class="cases__text text">
+                                                From Dentists to Dentists. In terms of our initiative to
+                                                support colleagues during quarantine we collected for you
+                                                useful...
+                                            </p>
+                                            <p class="cases__date text"><span></span> 18.11.2019</p>
+                                            <a href="#" class="cases__btns button">
+                                                Read <span></span>
+                                            </a>
+                                            <a href="#" class="cases__bottom-btn button">
+                                                See all <span></span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <a href="#" class="cases__bottom-btn button">
@@ -726,7 +747,6 @@
                             <img src="../images/partner-logo.svg" alt="logo" />
                         </div>
                     </div>
-
                     <div class="footer__address">
                         <h2 class="address__caption caption">Address</h2>
                         <div class="footer__map">
@@ -751,7 +771,7 @@
                             </p>
                         </div>
                         <div class="footer__logoImg">
-                            <img src="../images/logo.svg" alt="logo" />
+                            <img src="../images/logo.png" alt="logo" />
                         </div>
                     </div>
 
@@ -790,8 +810,9 @@
         </footer>
         <!---------- footer end ---------->
     </div>
-    <script src="../js/jquery.js"></script>
-    <script src="../js/slick.min.js"></script>
+    <script src="../js/splide.min.js"></script>
+    <script src="../js/splide-extension-grid.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
+
 </html>

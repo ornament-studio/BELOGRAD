@@ -216,15 +216,13 @@ p {
       display: flex;
       align-items: center;
       justify-content: center;
-
-      width: 370px;
-      height: 319px;
+      height: 100%;
+      aspect-ratio:  1.16/1;
       min-width: 300px;
       min-height: 216px;
 
       img {
         object-fit: cover;
-
         min-width: 100%;
         width: auto;
         min-height: 100%;
@@ -242,7 +240,6 @@ p {
       height: 100%;
       display: flex;
       flex-direction: column;
-      max-width: 550px;
       color: #fff;
     }
     .title {
@@ -335,39 +332,18 @@ p {
   .feedback__slider {
     width: calc(100% + 100px);
 
-    .slick-list {
-      overflow: hidden;
-    }
-    .slick-track {
-      gap: 20px;
-    }
-
-    .slick-active {
-      opacity: 1;
-    }
-
-    .slick-cloned {
-    }
-
-    .slick-arrow {
+    .splide__arrows  { 
       right: 100px;
-      top: -80px;
-    }
-
-    .slick-prev {
-      right: 155px;
     }
   }
   .feedback__item {
     padding: 20px 30px 20px 20px;
     background-color: #fff;
     color: #080808;
-    width: calc(50% - 10px);
+    width: calc((100% - 110px)/2);
     max-width: 610px;
     border-radius: 15px;
     overflow: hidden;
-    opacity: 0.5;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -382,9 +358,9 @@ p {
   .user {
   }
   .user__photo {
+    min-width: 71px;
     height: 71px;
     width: 71px;
-    max-width: 71px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -706,6 +682,16 @@ p {
 
   .feedback {
     padding-top: reWidth(120);
+
+    .feedback__slider { 
+      width: 100%;
+      .splide__arrows  { 
+        right: 0px;
+      }
+    }
+
+
+
   }
 
   /* faq section */
@@ -975,26 +961,16 @@ p {
     .feedback__slider {
       width: calc(100% + 35px);
 
-      .slick-track {
-        gap: 10px;
-      }
-
-      .slick-arrow {
+      .splide__arrows  { 
         right: 35px;
-        top: inherit;
-        bottom: -50px;
-      }
-
-      .slick-prev {
-        right: 85px;
       }
     }
     .feedback__item {
       padding: 30px 20px 30px 20px;
-      width: calc(50% - 10px);
       border-radius: 10px;
-
       gap: 20px;
+      width: auto;
+
     }
 
     .feedback__user {
@@ -1090,7 +1066,7 @@ p {
 
   .feedback {
     .feedback__item {
-      width: calc(100vw - 70px);
+      max-width: calc(100vw - 70px);
       grid-template-columns: 100%;
       grid-template-rows: min-content;
     }

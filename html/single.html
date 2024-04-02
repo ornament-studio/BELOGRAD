@@ -2,15 +2,14 @@
 <html lang="en">
 
 
- <!---------- Шаблон сторінки Статті ---------->
+<!---------- Шаблон сторінки Статті ---------->
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Belograd Agency</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/slick-theme.css">
-    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/splide.min.css">
 </head>
 
 <body>
@@ -35,7 +34,7 @@
                             </li>
                         </ul>
                     </div>
-                    <img src="../images/logo.svg" alt="logo" />
+                    <img class="header__logo" src="../images/logo.png" alt="logo" />
                     <div class="nav-menu">
                         <ul class="menu-list">
                             <li class="menu-item">
@@ -48,6 +47,7 @@
                     </div>
                 </div>
                 <div class="header__burgerIcon">
+                    <span class="word">Menu</span>
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
@@ -105,67 +105,134 @@
                             <li itemtype="http://data-vocabulary.org/Breadcrumb"><a href="" itemprop="url">Schedule</a>
                             </li>
                         </ul>
-                        <div class="head__author">
-                            <div class="avatar">
-                                <img src="" alt="">
+                        <div class="head__content">
+                            <div class="head__author">
+                                <div class="avatar">
+                                    <img src="../images/avatar-1.png" alt="">
+                                </div>
+                                <h5 class="name">Maxim Belograd
+                                    <a href="" class="link"></a>
+                                </h5>
+                                <p class="position">the founder of BELOGRAD Academy</p>
                             </div>
-                            <h5 class="name"></h5>
-                            <a href="" class="link"></a>
-                            <p class="position"></p>
+                            <h1 class="head__title">Double loop technique</h1>
+                            <p class="head__about">Double loop technique is considered to be one of the most efficient
+                                methods to isolate cervical zones. In many of cases it allows to work without clamp
+                                which
+                                gives more space and freedom to operator. Loop is placed around the tooth and tightened.
+                                As
+                                you may see – here we were able to open margin and cervical area completely.</p>
+                            <div class="image">
+                                <video id="video-frame" controls controlsList="nodownload" src="../images/video.mp4"
+                                    width="678" height="381" allowfullscreen="allowfullscreen"
+                                    poster="../images/cover-single.png">
+                                </video>
+                            </div>
                         </div>
-                        <h1 class="head__title">Double loop technique</h1>
-                        <p class="head__about">Double loop technique is considered to be one of the most efficient
-                            methods to isolate cervical zones. In many of cases it allows to work without clamp which
-                            gives more space and freedom to operator. Loop is placed around the tooth and tightened. As
-                            you may see – here we were able to open margin and cervical area completely.</p>
-                        <div class="image">
-                            <img src="../images/cases1.png" alt="">
-                        </div>
+
                     </div>
                 </div>
             </section>
             <section class="content">
                 <div class="content__container">
-                    <h2>From Dentists to Dentists. In terms of our initiative to support colleagues during quarantine we
-                        collected for you useful sources of free educational materials.</h2>
-                    <h3>From Dentists to Dentists. In terms of our initiative to support colleagues during quarantine we
-                        collected for you useful sources of free educational materials.</h3>
-                    <h4>From Dentists to Dentists. In terms of our initiative to support colleagues during quarantine we
-                        collected for you useful sources of free educational materials.</h4>
-                    <h5>From Dentists to Dentists. In terms of our initiative to support colleagues during quarantine we
-                        collected for you useful sources of free educational materials.</h5>
-                    <h6>From Dentists to Dentists. In terms of our initiative to support colleagues during quarantine we
-                        collected for you useful sources of free educational materials.</h6>
-                    <p>Lock the dates in your calendar, share this post with friends, tag them in comments!YOU WON'T MISS THIS!Live broadcasts will be on our Instagram account: https://www.instagram.com/maximbelograd/</p>
-                    <ul>
-                        <li>Tons of videos including live workshops that we keep recorded. Just scroll through and you
-                            will find a lot of unique materials. LINK
-                        </li>
-                        <li> 1 minute dental series. 1st season. Collection of short but precise step by step videos
-                            showing certain procedures. LINK
-                        </li>
-                        <li> 2nd season of 1 minute dental series. This collection is devoted mainly for tooth
-                            preparations. LINK
-                        </li>
-                        <li> Free webinars. These are series of clinical case reviews. Usually it is presented during
-                            commercial conferences but we made them free. LINK
-                        </li>
-                        <li>
-                            Paid online masterclass that we give for FREE in terms of support during quarantine. LINK
-                        </li>
-                    </ul>
-                </div>
-                <div class="article">
+                    <div class="content__inner">
+                        <div class="article__content">
+                            <p>From Dentists to Dentists. In terms of our initiative to support colleagues during
+                                quarantine we collected for you useful sources of free educational materials.</p>
 
-                </div>
-                <div class="sidebar">
+                            <ul>
+                                <li>Tons of videos including live workshops that we keep recorded. Just scroll through
+                                    and
+                                    you
+                                    will find a lot of unique materials. <a href="">LINK</a>
+                                </li>
+                                <li> 1 minute dental series. 1st season. Collection of short but precise step by step
+                                    videos
+                                    showing certain procedures. <a href="">LINK</a>
+                                </li>
+                                <li> 2nd season of 1 minute dental series. This collection is devoted mainly for tooth
+                                    preparations. <a href="">LINK</a>
+                                </li>
+                                <li> Free webinars. These are series of clinical case reviews. Usually it is presented
+                                    during
+                                    commercial conferences but we made them free. <a href="">LINK</a>
+                                </li>
+                                <li>
+                                    Paid online masterclass that we give for FREE in terms of support during quarantine.
+                                    <a href="">LINK</a>
+                                </li>
+                            </ul>
+                            <video id="video-frame" controls controlsList="nodownload" src="../images/video.mp4"
+                                width="678" height="381" allowfullscreen="allowfullscreen"
+                                poster="../images/cover-single.png">
+                            </video>
+                            <div class="events">
+                                <p>Live with the legend</p>
+                                <h3>Pascal magne</h3>
+                                <p>April 7th, 9.00 a.m. Los Angeles time, 19.00 p.m. Kiev time.Topic: IDS: does it
+                                    really help or waste our time?</p>
+                                <h3>Pascal magne</h3>
+                                <p>April 7th, 9.00 a.m. Los Angeles time, 19.00 p.m. Kiev time.Topic: IDS: does it
+                                    really help or waste our time?</p>
+                                <h3>Pascal magne</h3>
+                                <p>April 7th, 9.00 a.m. Los Angeles time, 19.00 p.m. Kiev time.Topic: IDS: does it
+                                    really help or waste our time?</p>
+                            </div>
+                            <p>Lock the dates in your calendar, share this post with friends, tag them in comments!YOU
+                                WON'T MISS THIS!Live broadcasts will be on our Instagram account: <a
+                                    href=" https://www.instagram.com/maximbelograd/">
+                                    https://www.instagram.com/maximbelograd/</a></p>
+                        </div>
+                        <div class="sidebar">
+                            <h3>Other popular articles</h3>
+                            <div class="sidebar__slider splide" role="group" aria-label="Splide Basic HTML Example">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="sidebar__article splide__slide article">
+                                            <div class="article__cover">
+                                                <a href=""></a>
+                                                <img src="../images/courses-back.png" alt="">
+                                            </div>
+                                            <div class="article__body">
+                                                <h4 class="article__title"> <a href=" ">Double loop technique</a></h4>
+                                                <p class="article__about">From Dentists to Dentists. In terms of our
+                                                    initiative to
+                                                    support colleagues during quarantine we collected for you useful...
+                                                </p>
+                                                <p class="article__data">18.11.2019</p>
+                                                <a href="" class="article__btn button">Read <span></span></a>
+                                                <a href="" class="article__btn-blue button">All articles <span></span></a>
+                                            </div>
+                                        </li>
 
+                                        <li class="sidebar__article splide__slide article">
+                                            <div class="article__cover">
+                                                <a href=""></a>
+                                                <img src="../images/courses-back.png" alt="">
+                                            </div>
+                                            <div class="article__body">
+                                                <h4 class="article__title"> <a href=" ">Double loop technique</a></h4>
+                                                <p class="article__about">From Dentists to Dentists. In terms of our
+                                                    initiative to
+                                                    support colleagues during quarantine we collected for you useful...
+                                                </p>
+                                                <p class="article__data">18.11.2019</p>
+                                                <a href="" class="article__btn button">Read <span></span></a>
+                                                <a href="" class="article__btn-blue button">All articles <span></span></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="" class="sidebar__btn-blue button">All articles <span></span></a>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
         <!---------- page end ---------->
         <!---------- footer ---------->
-        <footer class="footer">
+        <footer class="footer grey">
             <div class="footer__container bg-cover">
                 <div class="footer__inner">
                     <div class="footer__info">
@@ -226,7 +293,7 @@
                             </p>
                         </div>
                         <div class="footer__logoImg">
-                            <img src="../images/logo.svg" alt="logo" />
+                            <img src="../images/logo.png" alt="logo" />
                         </div>
                     </div>
 
@@ -265,8 +332,8 @@
         </footer>
         <!---------- footer end ---------->
     </div>
-    <script src="../js/jquery.js"></script>
-    <script src="../js/slick.min.js"></script>
+    <script src="../js/splide.min.js"></script>
+    <script src="../js/splide-extension-grid.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
 
