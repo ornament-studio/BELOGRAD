@@ -359,7 +359,7 @@ $textBlack: #080808;
 
   &::before {
     content: "";
-    background-image: url(/images/gradient-1bl.svg);
+    background-image: url(../images/gradient-1bl.svg);
     width: 1015px;
     height: 1092px;
     transform: rotate(-55.063deg);
@@ -1723,7 +1723,7 @@ $textBlack: #080808;
   .primary {
     &::before {
       content: "";
-      background-image: url(/images/preview-BGmob.svg);
+      background-image: url(../images/preview-BGmob.svg);
       top: -50px;
       left: -10px;
       width: 430px;
