@@ -5410,8 +5410,17 @@ p {
     top: inherit;
     transform: translate(-50%, 0);
   }
+  .oneToOne-page .gallery .gallery__slider .splide__arrows .splide__arrow {
+    position: initial;
+  }
   .oneToOne-page .gallery .gallery__slider .splide__arrows .splide__arrow--prev {
     background-color: #b6b6b6;
+  }
+  .oneToOne-page .gallery .gallery__slider .splide__arrows .splide__arrow--prev:hover {
+    transform: rotate(180deg) translateY(0px);
+  }
+  .oneToOne-page .gallery .gallery__slider .splide__arrows .splide__arrow--next:hover {
+    transform: rotate(-90deg) translateY(0px);
   }
   .oneToOne-page .gallery .gallery__item {
     width: 50vw;

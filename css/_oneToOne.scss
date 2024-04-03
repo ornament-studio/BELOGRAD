@@ -850,8 +850,23 @@
           top: inherit;
           transform: translate(-50%, 0);
 
+          .splide__arrow  { 
+            position: initial;
+
+     
+          }
           .splide__arrow--prev {
             background-color: #b6b6b6;
+
+            &:hover { 
+              transform:rotate(180deg) translateY(0px);
+            }
+          }
+          .splide__arrow--next {
+
+            &:hover { 
+              transform: rotate(-90deg) translateY(0px);
+            }
           }
         }
       }
